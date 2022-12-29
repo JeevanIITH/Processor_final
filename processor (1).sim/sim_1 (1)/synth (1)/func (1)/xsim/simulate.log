@@ -1,0 +1,5 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Failure: ok
+Time: 620 ns  Iteration: 0  Process: /Test_p1_2/stim_proc  File: /home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Test_p1_2.vhd
+$finish called at time : 620 ns : File "/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Test_p1_2.vhd" Line 124

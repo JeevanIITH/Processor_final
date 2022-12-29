@@ -1,0 +1,100 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto a474823dcd144881a1d6bc608361c727 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip -L xpm --snapshot Test_p1_2_behav xil_defaultlib.Test_p1_2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.std_logic_textio
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture behavioral of entity xil_defaultlib.add_pc [add_pc_default]
+Compiling architecture behavioral of entity xil_defaultlib.add_branch [add_branch_default]
+Compiling architecture behavioral of entity xil_defaultlib.shift_left_2 [shift_left_2_default]
+Compiling architecture behavioral of entity xil_defaultlib.zero_m [zero_m_default]
+Compiling architecture behavioral of entity xil_defaultlib.branch_and [branch_and_default]
+Compiling architecture behavioral of entity xil_defaultlib.pc_mux [pc_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.jump_mux [jump_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.pc_main [pc_main_default]
+Compiling architecture behavioral of entity xil_defaultlib.pc_main_helper [pc_main_helper_default]
+Compiling architecture behavioral of entity xil_defaultlib.jump_shift_left_2 [jump_shift_left_2_default]
+Compiling architecture gnd_v of entity unisim.GND [gnd_default]
+Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
+Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(init_00="0001000011000...]
+Compiling architecture structure of entity xil_defaultlib.instruction_block_module_blk_mem_gen_prim_wrapper_init [instruction_block_module_blk_mem...]
+Compiling architecture structure of entity xil_defaultlib.instruction_block_module_blk_mem_gen_prim_width [instruction_block_module_blk_mem...]
+Compiling architecture structure of entity xil_defaultlib.instruction_block_module_blk_mem_gen_generic_cstr [instruction_block_module_blk_mem...]
+Compiling architecture structure of entity xil_defaultlib.instruction_block_module_blk_mem_gen_top [instruction_block_module_blk_mem...]
+Compiling architecture structure of entity xil_defaultlib.instruction_block_module_blk_mem_gen_v8_4_3_synth [instruction_block_module_blk_mem...]
+Compiling architecture structure of entity xil_defaultlib.instruction_block_module_blk_mem_gen_v8_4_3 [instruction_block_module_blk_mem...]
+Compiling architecture structure of entity xil_defaultlib.instruction_block_module [instruction_block_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.sign_extend [sign_extend_default]
+Compiling architecture behavioral of entity xil_defaultlib.mux_reg [mux_reg_default]
+Compiling architecture behavioral of entity xil_defaultlib.register_file [\register_file(1,12)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter_module [counter_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.Control_Unit [control_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.add_enable [add_enable_default]
+Compiling architecture behavioral of entity xil_defaultlib.two_complement [two_complement_default]
+Compiling architecture struct of entity xil_defaultlib.one_bit_adder [one_bit_adder_default]
+Compiling architecture st1 of entity xil_defaultlib.Two_bit_adder [two_bit_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.four_bit_adder [four_bit_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.adder_8bit [adder_8bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.adder_16 [adder_16_default]
+Compiling architecture behavioral of entity xil_defaultlib.adder_32 [adder_32_default]
+Compiling architecture behavioral of entity xil_defaultlib.MUlT [mult_default]
+Compiling architecture behavioral of entity xil_defaultlib.div1 [div1_default]
+Compiling architecture behavioral of entity xil_defaultlib.Divider_module [divider_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.and_bit [and_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.or_bit [or_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.xor_bit [xor_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.shift_left_module [shift_left_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.Shift_right_module [shift_right_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.set_less_module [set_less_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.enable_demux_bus [enable_demux_bus_default]
+Compiling architecture behavioral of entity xil_defaultlib.demux [demux_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.mem_addr_helper [mem_addr_helper_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu_control [alu_control_default]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="01000000")(0,7)\]
+Compiling architecture structure of entity xil_defaultlib.memory_block_module_bindec [memory_block_module_bindec_defau...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000110010101100")(0...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="10111000")(0,7)\]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture structure of entity xil_defaultlib.memory_block_module_blk_mem_gen_mux [memory_block_module_blk_mem_gen_...]
+Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
+Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(rdaddr_collision_hwcon...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0010")(0,3)\]
+Compiling architecture structure of entity xil_defaultlib.memory_block_module_blk_mem_gen_prim_wrapper_init [memory_block_module_blk_mem_gen_...]
+Compiling architecture structure of entity xil_defaultlib.memory_block_module_blk_mem_gen_prim_width [memory_block_module_blk_mem_gen_...]
+Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
+Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(read_width_a=18,read_w...]
+Compiling architecture structure of entity xil_defaultlib.\memory_block_module_blk_mem_gen_prim_wrapper_init__parameterized0\ [\memory_block_module_blk_mem_gen...]
+Compiling architecture structure of entity xil_defaultlib.\memory_block_module_blk_mem_gen_prim_width__parameterized0\ [\memory_block_module_blk_mem_gen...]
+Compiling architecture structure of entity xil_defaultlib.\memory_block_module_blk_mem_gen_prim_wrapper_init__parameterized1\ [\memory_block_module_blk_mem_gen...]
+Compiling architecture structure of entity xil_defaultlib.\memory_block_module_blk_mem_gen_prim_width__parameterized1\ [\memory_block_module_blk_mem_gen...]
+Compiling architecture structure of entity xil_defaultlib.memory_block_module_blk_mem_gen_generic_cstr [memory_block_module_blk_mem_gen_...]
+Compiling architecture structure of entity xil_defaultlib.memory_block_module_blk_mem_gen_top [memory_block_module_blk_mem_gen_...]
+Compiling architecture structure of entity xil_defaultlib.memory_block_module_blk_mem_gen_v8_4_3_synth [memory_block_module_blk_mem_gen_...]
+Compiling architecture structure of entity xil_defaultlib.memory_block_module_blk_mem_gen_v8_4_3 [memory_block_module_blk_mem_gen_...]
+Compiling architecture structure of entity xil_defaultlib.memory_block_module [memory_block_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.mux_mem [mux_mem_default]
+Compiling architecture behavioral of entity xil_defaultlib.mux_alu [mux_alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.dot_mux_module [dot_mux_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.Register_Dot [\Register_Dot(1,17)\]
+Compiling architecture behavioral of entity xil_defaultlib.multiplier [multiplier_default]
+Compiling architecture behavioral of entity xil_defaultlib.Adder [adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.Dot_prod_module [dot_prod_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.processor [processor_default]
+Compiling architecture behavior of entity xil_defaultlib.test_p1_2
+Built simulation snapshot Test_p1_2_behav

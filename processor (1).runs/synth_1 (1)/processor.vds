@@ -1,0 +1,1048 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Dec 29 10:09:19 2022
+# Process ID: 5541
+# Current directory: /home/lab/JeevanS/processor-vivado/final_processor/processor/processor.runs/synth_1
+# Command line: vivado -log processor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source processor.tcl
+# Log file: /home/lab/JeevanS/processor-vivado/final_processor/processor/processor.runs/synth_1/processor.vds
+# Journal file: /home/lab/JeevanS/processor-vivado/final_processor/processor/processor.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source processor.tcl -notrace
+Command: synth_design -top processor -part xc7a100tcsg324-3 -flatten_hierarchy none
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5569 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1755.086 ; gain = 154.719 ; free physical = 9677 ; free virtual = 14872
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5637] invalid to access mif_file from inside pure function init_memory_wfile [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Register_Dot.vhd:63]
+WARNING: [Synth 8-5637] invalid to access mif_file from inside pure function init_memory_wfile [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/register_file.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'processor' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:49]
+INFO: [Synth 8-3491] module 'add_pc' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/add_pc.vhd:33' bound to instance 'pc_plus_four' of component 'add_pc' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:336]
+INFO: [Synth 8-638] synthesizing module 'add_pc' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/add_pc.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'add_pc' (1#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/add_pc.vhd:38]
+INFO: [Synth 8-3491] module 'add_branch' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/add_branch.vhd:34' bound to instance 'pc_plus_immediate' of component 'add_branch' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:337]
+INFO: [Synth 8-638] synthesizing module 'add_branch' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/add_branch.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'add_branch' (2#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/add_branch.vhd:40]
+INFO: [Synth 8-3491] module 'shift_left_2' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/shift_left_2.vhd:32' bound to instance 'shift_left_two' of component 'shift_left_2' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:338]
+INFO: [Synth 8-638] synthesizing module 'shift_left_2' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/shift_left_2.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'shift_left_2' (3#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/shift_left_2.vhd:37]
+INFO: [Synth 8-3491] module 'zero_m' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/zero_m.vhd:32' bound to instance 'zero_module' of component 'zero_m' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:339]
+INFO: [Synth 8-638] synthesizing module 'zero_m' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/zero_m.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'zero_m' (4#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/zero_m.vhd:39]
+INFO: [Synth 8-3491] module 'branch_and' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/branch_and.vhd:32' bound to instance 'branch_and_module' of component 'branch_and' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:340]
+INFO: [Synth 8-638] synthesizing module 'branch_and' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/branch_and.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'branch_and' (5#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/branch_and.vhd:38]
+INFO: [Synth 8-3491] module 'pc_mux' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_mux.vhd:32' bound to instance 'mux_pc' of component 'pc_mux' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:342]
+INFO: [Synth 8-638] synthesizing module 'pc_mux' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_mux.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'pc_mux' (6#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_mux.vhd:40]
+INFO: [Synth 8-3491] module 'jump_mux' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/jump_mux.vhd:32' bound to instance 'mux_jump' of component 'jump_mux' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:344]
+INFO: [Synth 8-638] synthesizing module 'jump_mux' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/jump_mux.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'jump_mux' (7#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/jump_mux.vhd:40]
+INFO: [Synth 8-3491] module 'pc_main' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_main.vhd:32' bound to instance 'pc_main_module' of component 'pc_main' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:346]
+INFO: [Synth 8-638] synthesizing module 'pc_main' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_main.vhd:41]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_main.vhd:48]
+WARNING: [Synth 8-614] signal 'pc_in' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_main.vhd:48]
+WARNING: [Synth 8-614] signal 'pc_curr_register' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_main.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'pc_main' (8#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_main.vhd:41]
+INFO: [Synth 8-3491] module 'pc_main_helper' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_main_helper.vhd:32' bound to instance 'pc_main_extend' of component 'pc_main_helper' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:347]
+INFO: [Synth 8-638] synthesizing module 'pc_main_helper' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_main_helper.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'pc_main_helper' (9#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/pc_main_helper.vhd:39]
+INFO: [Synth 8-3491] module 'jump_shift_left_2' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/jump_shift_left_2.vhd:32' bound to instance 'jump_shift' of component 'jump_shift_left_2' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:349]
+INFO: [Synth 8-638] synthesizing module 'jump_shift_left_2' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/jump_shift_left_2.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'jump_shift_left_2' (10#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/jump_shift_left_2.vhd:37]
+INFO: [Synth 8-3491] module 'instruction_block_module' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.runs/synth_1/.Xil/Vivado-5541-b524-09/realtime/instruction_block_module_stub.vhdl:5' bound to instance 'instruction_block' of component 'instruction_block_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:351]
+INFO: [Synth 8-638] synthesizing module 'instruction_block_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.runs/synth_1/.Xil/Vivado-5541-b524-09/realtime/instruction_block_module_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'sign_extend' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/sign_extend.vhd:32' bound to instance 'sign_ext' of component 'sign_extend' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:356]
+INFO: [Synth 8-638] synthesizing module 'sign_extend' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/sign_extend.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'sign_extend' (11#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/sign_extend.vhd:37]
+INFO: [Synth 8-3491] module 'mux_reg' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mux_reg.vhd:32' bound to instance 'reg_mux' of component 'mux_reg' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:358]
+INFO: [Synth 8-638] synthesizing module 'mux_reg' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mux_reg.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'mux_reg' (12#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mux_reg.vhd:39]
+INFO: [Synth 8-3491] module 'register_file' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/register_file.vhd:36' bound to instance 'registers' of component 'register_file' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:359]
+INFO: [Synth 8-638] synthesizing module 'register_file' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/register_file.vhd:53]
+	Parameter INIT_FILE bound to: register.txt - type: string 
+WARNING: [Synth 8-614] signal 'enable_write' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/register_file.vhd:78]
+WARNING: [Synth 8-614] signal 'addition_register1' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/register_file.vhd:87]
+INFO: [Synth 8-256] done synthesizing module 'register_file' (13#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/register_file.vhd:53]
+INFO: [Synth 8-3491] module 'Control_Unit' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Control_Unit.vhd:37' bound to instance 'controller' of component 'Control_unit' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:362]
+INFO: [Synth 8-638] synthesizing module 'Control_Unit' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Control_Unit.vhd:61]
+INFO: [Synth 8-3491] module 'counter_module' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/counter_module.vhd:34' bound to instance 'counter' of component 'counter_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Control_Unit.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'counter_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/counter_module.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'counter_module' (14#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/counter_module.vhd:40]
+WARNING: [Synth 8-614] signal 'op_code' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Control_Unit.vhd:74]
+WARNING: [Synth 8-614] signal 'output_counter_signal' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Control_Unit.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'Control_Unit' (15#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Control_Unit.vhd:61]
+INFO: [Synth 8-3491] module 'alu' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:35' bound to instance 'alu1' of component 'alu' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:366]
+INFO: [Synth 8-638] synthesizing module 'alu' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:49]
+INFO: [Synth 8-3491] module 'adder_32' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_32.vhd:32' bound to instance 'Adder' of component 'adder_32' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:222]
+INFO: [Synth 8-638] synthesizing module 'adder_32' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_32.vhd:42]
+INFO: [Synth 8-3491] module 'add_enable' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/add_enable.vhd:32' bound to instance 'enable_comp' of component 'add_enable' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_32.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'add_enable' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/add_enable.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'add_enable' (16#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/add_enable.vhd:40]
+INFO: [Synth 8-3491] module 'two_complement' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/two_complement.vhd:34' bound to instance 'sign_invert' of component 'two_complement' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_32.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'two_complement' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/two_complement.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'two_complement' (17#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/two_complement.vhd:40]
+INFO: [Synth 8-3491] module 'adder_16' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder-16.vhd:32' bound to instance 'adder1' of component 'adder_16' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_32.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'adder_16' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder-16.vhd:40]
+INFO: [Synth 8-3491] module 'adder_8bit' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_8bit.vhd:32' bound to instance 'adder1' of component 'adder_8bit' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder-16.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'adder_8bit' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_8bit.vhd:40]
+INFO: [Synth 8-3491] module 'four_bit_adder' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/four_bit_adder.vhd:32' bound to instance 'adder1' of component 'four_bit_adder' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_8bit.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'four_bit_adder' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/four_bit_adder.vhd:40]
+INFO: [Synth 8-3491] module 'Two_bit_adder' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Two_bit_adder.vhd:32' bound to instance 'f0' of component 'Two_bit_adder' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/four_bit_adder.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'Two_bit_adder' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Two_bit_adder.vhd:43]
+INFO: [Synth 8-3491] module 'one_bit_adder' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/one_bit_adder.vhd:32' bound to instance 'f1' of component 'one_bit_adder' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Two_bit_adder.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'one_bit_adder' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/one_bit_adder.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'one_bit_adder' (18#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/one_bit_adder.vhd:40]
+INFO: [Synth 8-3491] module 'one_bit_adder' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/one_bit_adder.vhd:32' bound to instance 'f2' of component 'one_bit_adder' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Two_bit_adder.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Two_bit_adder' (19#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Two_bit_adder.vhd:43]
+INFO: [Synth 8-3491] module 'Two_bit_adder' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Two_bit_adder.vhd:32' bound to instance 'f1' of component 'Two_bit_adder' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/four_bit_adder.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'four_bit_adder' (20#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/four_bit_adder.vhd:40]
+INFO: [Synth 8-3491] module 'four_bit_adder' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/four_bit_adder.vhd:32' bound to instance 'adder2' of component 'four_bit_adder' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_8bit.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'adder_8bit' (21#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_8bit.vhd:40]
+INFO: [Synth 8-3491] module 'adder_8bit' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_8bit.vhd:32' bound to instance 'adder2' of component 'adder_8bit' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder-16.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'adder_16' (22#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder-16.vhd:40]
+INFO: [Synth 8-3491] module 'adder_16' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder-16.vhd:32' bound to instance 'adder2' of component 'adder_16' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_32.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'adder_32' (23#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/adder_32.vhd:42]
+INFO: [Synth 8-3491] module 'MUlT' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/MUlT.vhd:34' bound to instance 'Multiplier' of component 'MUlT' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:223]
+INFO: [Synth 8-638] synthesizing module 'MUlT' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/MUlT.vhd:43]
+WARNING: [Synth 8-614] signal 'i' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/MUlT.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'MUlT' (24#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/MUlT.vhd:43]
+INFO: [Synth 8-3491] module 'Divider_module' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Divider_module.vhd:33' bound to instance 'Divider' of component 'Divider_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:225]
+INFO: [Synth 8-638] synthesizing module 'Divider_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Divider_module.vhd:43]
+WARNING: [Synth 8-614] signal 'm' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Divider_module.vhd:70]
+WARNING: [Synth 8-614] signal 'd' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Divider_module.vhd:70]
+INFO: [Synth 8-3491] module 'div1' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/div1.vhd:33' bound to instance 'divider' of component 'div1' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Divider_module.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'div1' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/div1.vhd:45]
+WARNING: [Synth 8-6014] Unused sequential element t_reg was removed.  [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/div1.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element reg1_reg was removed.  [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/div1.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'div1' (25#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/div1.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'Divider_module' (26#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Divider_module.vhd:43]
+INFO: [Synth 8-3491] module 'and_bit' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/AND.vhd:32' bound to instance 'BitwiseAnd' of component 'and_bit' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'and_bit' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/AND.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'and_bit' (27#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/AND.vhd:38]
+INFO: [Synth 8-3491] module 'or_bit' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/or_bit.vhd:32' bound to instance 'BitwiseOr' of component 'or_bit' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:227]
+INFO: [Synth 8-638] synthesizing module 'or_bit' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/or_bit.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'or_bit' (28#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/or_bit.vhd:38]
+INFO: [Synth 8-3491] module 'xor_bit' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/xor_bit.vhd:32' bound to instance 'BitwiseXor' of component 'xor_bit' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:228]
+INFO: [Synth 8-638] synthesizing module 'xor_bit' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/xor_bit.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'xor_bit' (29#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/xor_bit.vhd:38]
+INFO: [Synth 8-3491] module 'shift_left_module' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/shift_left_module.vhd:33' bound to instance 'shift_left' of component 'shift_left_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:229]
+INFO: [Synth 8-638] synthesizing module 'shift_left_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/shift_left_module.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'shift_left_module' (30#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/shift_left_module.vhd:41]
+INFO: [Synth 8-3491] module 'Shift_right_module' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Shift_right_module.vhd:33' bound to instance 'shift_right' of component 'shift_right_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:230]
+INFO: [Synth 8-638] synthesizing module 'Shift_right_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Shift_right_module.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'Shift_right_module' (31#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Shift_right_module.vhd:41]
+INFO: [Synth 8-3491] module 'set_less_module' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/set_less_module.vhd:33' bound to instance 'set_less_than' of component 'set_less_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:231]
+INFO: [Synth 8-638] synthesizing module 'set_less_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/set_less_module.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'set_less_module' (32#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/set_less_module.vhd:41]
+INFO: [Synth 8-3491] module 'enable_demux_bus' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/enable_demux_bus.vhd:32' bound to instance 'enable_bus_module' of component 'enable_demux_bus' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:233]
+INFO: [Synth 8-638] synthesizing module 'enable_demux_bus' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/enable_demux_bus.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'enable_demux_bus' (33#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/enable_demux_bus.vhd:52]
+INFO: [Synth 8-3491] module 'demux' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/demux.vhd:32' bound to instance 'alu_select' of component 'demux' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:235]
+INFO: [Synth 8-638] synthesizing module 'demux' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/demux.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'demux' (34#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/demux.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'alu' (35#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:49]
+INFO: [Synth 8-3491] module 'mem_addr_helper' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mem_addr_helper.vhd:32' bound to instance 'mem_helper' of component 'mem_addr_helper' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'mem_addr_helper' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mem_addr_helper.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'mem_addr_helper' (36#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mem_addr_helper.vhd:37]
+INFO: [Synth 8-3491] module 'alu_control' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu_control.vhd:32' bound to instance 'alu_control_unit' of component 'alu_control' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:370]
+INFO: [Synth 8-638] synthesizing module 'alu_control' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu_control.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'alu_control' (37#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu_control.vhd:39]
+INFO: [Synth 8-3491] module 'memory_block_module' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.runs/synth_1/.Xil/Vivado-5541-b524-09/realtime/memory_block_module_stub.vhdl:5' bound to instance 'memory_unit' of component 'memory_block_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:373]
+INFO: [Synth 8-638] synthesizing module 'memory_block_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.runs/synth_1/.Xil/Vivado-5541-b524-09/realtime/memory_block_module_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'mux_mem' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mux_mem.vhd:32' bound to instance 'memory_mux' of component 'mux_mem' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:374]
+INFO: [Synth 8-638] synthesizing module 'mux_mem' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mux_mem.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'mux_mem' (38#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mux_mem.vhd:39]
+INFO: [Synth 8-3491] module 'mux_alu' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mux_alu.vhd:32' bound to instance 'alu_mux' of component 'mux_alu' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:375]
+INFO: [Synth 8-638] synthesizing module 'mux_alu' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mux_alu.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'mux_alu' (39#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/mux_alu.vhd:39]
+INFO: [Synth 8-3491] module 'dot_mux_module' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/dot_mux_module.vhd:32' bound to instance 'write_data_mux_mem' of component 'dot_mux_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:376]
+INFO: [Synth 8-638] synthesizing module 'dot_mux_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/dot_mux_module.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'dot_mux_module' (40#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/dot_mux_module.vhd:39]
+INFO: [Synth 8-3491] module 'Dot_prod_module' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Dot_prod_module.vhd:34' bound to instance 'dot_product_unit' of component 'Dot_prod_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:378]
+INFO: [Synth 8-638] synthesizing module 'Dot_prod_module' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Dot_prod_module.vhd:44]
+INFO: [Synth 8-3491] module 'Register_Dot' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Register_Dot.vhd:35' bound to instance 'Register_file' of component 'Register_Dot' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Dot_prod_module.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'Register_Dot' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Register_Dot.vhd:52]
+	Parameter INIT_FILE bound to: registers_dot.txt - type: string 
+WARNING: [Synth 8-614] signal 'write_enable' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Register_Dot.vhd:72]
+WARNING: [Synth 8-614] signal 'registers' is read in the process but is not in the sensitivity list [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Register_Dot.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'Register_Dot' (41#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Register_Dot.vhd:52]
+INFO: [Synth 8-3491] module 'multiplier' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/multiplier.vhd:34' bound to instance 'mult1' of component 'multiplier' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Dot_prod_module.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'multiplier' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/multiplier.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'multiplier' (42#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/multiplier.vhd:41]
+INFO: [Synth 8-3491] module 'multiplier' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/multiplier.vhd:34' bound to instance 'mult2' of component 'multiplier' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Dot_prod_module.vhd:85]
+INFO: [Synth 8-3491] module 'multiplier' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/multiplier.vhd:34' bound to instance 'mult3' of component 'multiplier' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Dot_prod_module.vhd:86]
+INFO: [Synth 8-3491] module 'multiplier' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/multiplier.vhd:34' bound to instance 'mult4' of component 'multiplier' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Dot_prod_module.vhd:87]
+INFO: [Synth 8-3491] module 'Adder' declared at '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Adder.vhd:34' bound to instance 'Acc' of component 'Adder' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Dot_prod_module.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'Adder' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Adder.vhd:43]
+WARNING: [Synth 8-3848] Net cout in module/entity Adder does not have driver. [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Adder.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Adder' (43#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Adder.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'Dot_prod_module' (44#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Dot_prod_module.vhd:44]
+WARNING: [Synth 8-3848] Net wea_signal in module/entity processor does not have driver. [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:273]
+WARNING: [Synth 8-3848] Net dina_signal in module/entity processor does not have driver. [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:274]
+INFO: [Synth 8-256] done synthesizing module 'processor' (45#1) [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/processor.vhd:49]
+WARNING: [Synth 8-3331] design Adder has unconnected port cout
+WARNING: [Synth 8-3331] design multiplier has unconnected port clock
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[31]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[30]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[29]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[28]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[27]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[26]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[25]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[24]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[23]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[22]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[21]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[20]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[19]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[18]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[17]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[16]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[15]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[14]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[13]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[12]
+WARNING: [Synth 8-3331] design set_less_module has unconnected port clock
+WARNING: [Synth 8-3331] design Shift_right_module has unconnected port clock
+WARNING: [Synth 8-3331] design shift_left_module has unconnected port clock
+WARNING: [Synth 8-3331] design pc_main has unconnected port pc_write
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1809.836 ; gain = 209.469 ; free physical = 9695 ; free virtual = 14891
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1815.773 ; gain = 215.406 ; free physical = 9696 ; free virtual = 14891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1815.773 ; gain = 215.406 ; free physical = 9696 ; free virtual = 14891
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/ip/instruction_block_module/instruction_block_module/instruction_block_module_in_context.xdc] for cell 'instruction_block'
+Finished Parsing XDC File [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/ip/instruction_block_module/instruction_block_module/instruction_block_module_in_context.xdc] for cell 'instruction_block'
+Parsing XDC File [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/ip/memory_block_module/memory_block_module/memory_block_module_in_context.xdc] for cell 'memory_unit'
+Finished Parsing XDC File [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/ip/memory_block_module/memory_block_module/memory_block_module_in_context.xdc] for cell 'memory_unit'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1990.523 ; gain = 0.000 ; free physical = 9618 ; free virtual = 14813
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1990.523 ; gain = 0.000 ; free physical = 9618 ; free virtual = 14813
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9682 ; free virtual = 14877
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9682 ; free virtual = 14877
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for instruction_block. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for memory_unit. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9684 ; free virtual = 14879
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "ALU_Src" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "Mem_write" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "Reg_dst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ALU_op" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem_to_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "Mem_read" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "Branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Jump" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "dot_mux_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "dot_read_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dot_sel_result" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dot_write_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_additional_register" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "alu_control_input" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'sel_additional_register_reg' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/Control_Unit.vhd:104]
+WARNING: [Synth 8-327] inferring latch for variable 'as_reg' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/add_enable.vhd:46]
+WARNING: [Synth 8-327] inferring latch for variable 'bs_reg' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/add_enable.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/two_complement.vhd:46]
+WARNING: [Synth 8-327] inferring latch for variable 'r_reg' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/set_less_module.vhd:48]
+WARNING: [Synth 8-327] inferring latch for variable 'invert_reg' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:222]
+WARNING: [Synth 8-327] inferring latch for variable 'cin_adder_reg' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu.vhd:222]
+WARNING: [Synth 8-327] inferring latch for variable 'count_reg' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu_control.vhd:46]
+WARNING: [Synth 8-327] inferring latch for variable 'alu_control_input_reg' [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/alu_control.vhd:45]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9676 ; free virtual = 14872
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     64 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 9     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   3 Input      1 Bit         XORs := 32    
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 17    
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 33    
+	  11 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	  10 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 11    
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module add_pc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module add_branch 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module pc_mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module jump_mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module pc_main 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module mux_reg 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+Module register_file 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module counter_module 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+Module Control_Unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input      2 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 15    
+Module add_enable 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module two_complement 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module one_bit_adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+Module MUlT 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 2     
+Module div1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module Divider_module 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+Module xor_bit 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+Module shift_left_module 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module Shift_right_module 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module demux 
+Detailed RTL Component Info : 
++---Muxes : 
+	  10 Input     16 Bit        Muxes := 1     
+Module alu 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input     32 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 1     
+Module alu_control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module mux_mem 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module mux_alu 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module dot_mux_module 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module Register_Dot 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 8     
+Module multiplier 
+Detailed RTL Component Info : 
++---Multipliers : 
+	                32x32  Multipliers := 1     
+Module Adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     64 Bit       Adders := 1     
+Module Dot_prod_module 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.srcs/sources_1/imports/p1/multiplier.vhd:44]
+DSP Report: Generating DSP result, operation Mode is: A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: Generating DSP result, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result is absorbed into DSP result.
+DSP Report: operator result is absorbed into DSP result.
+WARNING: [Synth 8-3331] design Adder has unconnected port cout
+WARNING: [Synth 8-3331] design multiplier has unconnected port clock
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[31]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[30]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[29]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[28]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[27]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[26]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[25]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[24]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[23]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[22]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[21]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[20]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[19]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[18]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[17]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[16]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[15]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[14]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[13]
+WARNING: [Synth 8-3331] design mem_addr_helper has unconnected port a[12]
+WARNING: [Synth 8-3331] design set_less_module has unconnected port clock
+WARNING: [Synth 8-3331] design Shift_right_module has unconnected port clock
+WARNING: [Synth 8-3331] design shift_left_module has unconnected port clock
+WARNING: [Synth 8-3331] design pc_main has unconnected port pc_write
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (alu1/Multiplier/\store_reg[0] )
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[2]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[3]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[4]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[6]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[7]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[8]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[9]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[10]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[11]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[12]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[13]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[14]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[15]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[16]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[17]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[18]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[19]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[20]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[21]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[22]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[23]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[24]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[25]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[26]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[27]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[28]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[29]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'alu_control_unit/count_reg[30]' (LDC) to 'alu_control_unit/count_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (alu_control_unit/\count_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (alu1/cin_adder_reg)
+WARNING: [Synth 8-3332] Sequential element (as_reg[31]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[30]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[29]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[28]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[27]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[26]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[25]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[24]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[23]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[22]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[21]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[20]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[19]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[18]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[17]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[16]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[15]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[14]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[13]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[12]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[11]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[10]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[9]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[8]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[7]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[6]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[5]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[4]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[3]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[2]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[1]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (as_reg[0]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[31]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[30]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[29]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[28]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[27]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[26]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[25]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[24]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[23]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[22]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[21]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[20]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[19]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[18]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[17]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[16]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[15]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[14]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[13]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[12]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[11]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[10]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[9]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[8]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[7]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[6]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[5]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[4]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[3]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[2]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[1]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (bs_reg[0]) is unused and will be removed from module add_enable.
+WARNING: [Synth 8-3332] Sequential element (output_reg[31]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[30]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[29]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[28]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[27]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[26]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[25]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[24]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[23]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[22]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[21]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[20]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[19]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[18]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[17]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[16]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[15]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[14]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[13]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[12]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[11]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[10]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[9]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[8]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[7]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[6]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[5]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[4]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[3]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[2]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[1]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (output_reg[0]) is unused and will be removed from module two_complement.
+WARNING: [Synth 8-3332] Sequential element (cin_adder_reg) is unused and will be removed from module alu.
+WARNING: [Synth 8-3332] Sequential element (count_reg[31]) is unused and will be removed from module alu_control.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9645 ; free virtual = 14846
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+---------------+-----------+----------------------+---------------+
+|Module Name | RTL Object    | Inference | Size (Depth x Width) | Primitives    | 
++------------+---------------+-----------+----------------------+---------------+
+|registers   | registers_reg | Implied   | 32 x 32              | RAM32M x 12   | 
++------------+---------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multiplier  | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9504 ; free virtual = 14706
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9502 ; free virtual = 14703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+---------------+-----------+----------------------+---------------+
+|Module Name | RTL Object    | Inference | Size (Depth x Width) | Primitives    | 
++------------+---------------+-----------+----------------------+---------------+
+|registers   | registers_reg | Implied   | 32 x 32              | RAM32M x 12   | 
++------------+---------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9499 ; free virtual = 14700
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin wea[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin wea[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin wea[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin wea[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[31]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[30]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[29]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[28]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[27]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[26]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[25]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[24]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[23]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[22]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[21]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[20]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[19]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[18]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[17]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[16]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[13]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module instruction_block has unconnected pin dina[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9499 ; free virtual = 14700
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9499 ; free virtual = 14700
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9499 ; free virtual = 14700
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------+----------+
+|      |BlackBox name            |Instances |
++------+-------------------------+----------+
+|1     |instruction_block_module |         1|
+|2     |memory_block_module      |         1|
++------+-------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |instruction_block_module_bbox_0 |     1|
+|2     |memory_block_module_bbox_1      |     1|
+|3     |BUFG                            |     1|
+|4     |CARRY4                          |   177|
+|5     |DSP48E1                         |    16|
+|6     |LUT1                            |   164|
+|7     |LUT2                            |   916|
+|8     |LUT3                            |   468|
+|9     |LUT4                            |   282|
+|10    |LUT5                            |   154|
+|11    |LUT6                            |   298|
+|12    |MUXF7                           |     8|
+|13    |RAM32M                          |    12|
+|14    |FDCE                            |   344|
+|15    |FDPE                            |     5|
+|16    |FDRE                            |   294|
+|17    |LD                              |     3|
+|18    |LDC                             |     2|
+|19    |LDCP                            |     5|
+|20    |IBUF                            |     2|
+|21    |OBUF                            |     1|
++------+--------------------------------+------+
+
+Report Instance Areas: 
++------+---------------------+-------------------+------+
+|      |Instance             |Module             |Cells |
++------+---------------------+-------------------+------+
+|1     |top                  |                   |  3216|
+|2     |  pc_plus_four       |add_pc             |     9|
+|3     |  pc_plus_immediate  |add_branch         |    24|
+|4     |  zero_module        |zero_m             |     7|
+|5     |  branch_and_module  |branch_and         |     1|
+|6     |  mux_pc             |pc_mux             |    32|
+|7     |  mux_jump           |jump_mux           |    32|
+|8     |  pc_main_module     |pc_main            |    64|
+|9     |  reg_mux            |mux_reg            |     5|
+|10    |  registers          |register_file      |    76|
+|11    |  controller         |Control_Unit       |    36|
+|12    |    counter          |counter_module     |    12|
+|13    |  alu1               |alu                |  1734|
+|14    |    Adder            |adder_32           |   168|
+|15    |      enable_comp    |add_enable         |    64|
+|16    |      sign_invert    |two_complement     |    40|
+|17    |      adder1         |adder_16__1        |    32|
+|18    |        adder1       |adder_8bit__3      |    16|
+|19    |          adder1     |four_bit_adder__7  |     8|
+|20    |            f0       |Two_bit_adder__15  |     4|
+|21    |              f1     |one_bit_adder__31  |     2|
+|22    |              f2     |one_bit_adder__30  |     2|
+|23    |            f1       |Two_bit_adder__14  |     4|
+|24    |              f1     |one_bit_adder__29  |     2|
+|25    |              f2     |one_bit_adder__28  |     2|
+|26    |          adder2     |four_bit_adder__6  |     8|
+|27    |            f0       |Two_bit_adder__13  |     4|
+|28    |              f1     |one_bit_adder__27  |     2|
+|29    |              f2     |one_bit_adder__26  |     2|
+|30    |            f1       |Two_bit_adder__12  |     4|
+|31    |              f1     |one_bit_adder__25  |     2|
+|32    |              f2     |one_bit_adder__24  |     2|
+|33    |        adder2       |adder_8bit__2      |    16|
+|34    |          adder1     |four_bit_adder__5  |     8|
+|35    |            f0       |Two_bit_adder__11  |     4|
+|36    |              f1     |one_bit_adder__23  |     2|
+|37    |              f2     |one_bit_adder__22  |     2|
+|38    |            f1       |Two_bit_adder__10  |     4|
+|39    |              f1     |one_bit_adder__21  |     2|
+|40    |              f2     |one_bit_adder__20  |     2|
+|41    |          adder2     |four_bit_adder__4  |     8|
+|42    |            f0       |Two_bit_adder__9   |     4|
+|43    |              f1     |one_bit_adder__19  |     2|
+|44    |              f2     |one_bit_adder__18  |     2|
+|45    |            f1       |Two_bit_adder__8   |     4|
+|46    |              f1     |one_bit_adder__17  |     2|
+|47    |              f2     |one_bit_adder__16  |     2|
+|48    |      adder2         |adder_16           |    32|
+|49    |        adder1       |adder_8bit__1      |    16|
+|50    |          adder1     |four_bit_adder__3  |     8|
+|51    |            f0       |Two_bit_adder__7   |     4|
+|52    |              f1     |one_bit_adder__15  |     2|
+|53    |              f2     |one_bit_adder__14  |     2|
+|54    |            f1       |Two_bit_adder__6   |     4|
+|55    |              f1     |one_bit_adder__13  |     2|
+|56    |              f2     |one_bit_adder__12  |     2|
+|57    |          adder2     |four_bit_adder__2  |     8|
+|58    |            f0       |Two_bit_adder__5   |     4|
+|59    |              f1     |one_bit_adder__11  |     2|
+|60    |              f2     |one_bit_adder__10  |     2|
+|61    |            f1       |Two_bit_adder__4   |     4|
+|62    |              f1     |one_bit_adder__9   |     2|
+|63    |              f2     |one_bit_adder__8   |     2|
+|64    |        adder2       |adder_8bit         |    16|
+|65    |          adder1     |four_bit_adder__1  |     8|
+|66    |            f0       |Two_bit_adder__3   |     4|
+|67    |              f1     |one_bit_adder__7   |     2|
+|68    |              f2     |one_bit_adder__6   |     2|
+|69    |            f1       |Two_bit_adder__2   |     4|
+|70    |              f1     |one_bit_adder__5   |     2|
+|71    |              f2     |one_bit_adder__4   |     2|
+|72    |          adder2     |four_bit_adder     |     8|
+|73    |            f0       |Two_bit_adder__1   |     4|
+|74    |              f1     |one_bit_adder__3   |     2|
+|75    |              f2     |one_bit_adder__2   |     2|
+|76    |            f1       |Two_bit_adder      |     4|
+|77    |              f1     |one_bit_adder__1   |     2|
+|78    |              f2     |one_bit_adder      |     2|
+|79    |    Multiplier       |MUlT               |   335|
+|80    |    Divider          |Divider_module     |   768|
+|81    |      divider        |div1               |   484|
+|82    |    BitwiseAnd       |and_bit            |    32|
+|83    |    BitwiseOr        |or_bit             |    32|
+|84    |    BitwiseXor       |xor_bit            |    32|
+|85    |    shift_left       |shift_left_module  |    95|
+|86    |    shift_right      |Shift_right_module |    95|
+|87    |    set_less_than    |set_less_module    |    37|
+|88    |    alu_select       |demux              |     6|
+|89    |  alu_control_unit   |alu_control        |    23|
+|90    |  memory_mux         |mux_mem            |    32|
+|91    |  alu_mux            |mux_alu            |    32|
+|92    |  write_data_mux_mem |dot_mux_module     |    32|
+|93    |  dot_product_unit   |Dot_prod_module    |  1009|
+|94    |    Register_file    |Register_Dot       |   520|
+|95    |    mult1            |multiplier__1      |    63|
+|96    |    mult2            |multiplier__2      |    63|
+|97    |    mult3            |multiplier__3      |    63|
+|98    |    mult4            |multiplier         |    63|
+|99    |    Acc              |Adder              |   205|
++------+---------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9499 ; free virtual = 14700
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 36 critical warnings and 133 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1990.523 ; gain = 215.406 ; free physical = 9570 ; free virtual = 14771
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1990.523 ; gain = 390.156 ; free physical = 9570 ; free virtual = 14771
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 223 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2008.445 ; gain = 0.000 ; free physical = 9513 ; free virtual = 14715
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 22 instances were transformed.
+  LD => LDCE: 3 instances
+  LDC => LDCE: 2 instances
+  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 5 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+205 Infos, 178 Warnings, 36 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2008.445 ; gain = 623.148 ; free physical = 9609 ; free virtual = 14811
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2008.445 ; gain = 0.000 ; free physical = 9609 ; free virtual = 14811
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/lab/JeevanS/processor-vivado/final_processor/processor/processor.runs/synth_1/processor.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file processor_utilization_synth.rpt -pb processor_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 29 10:09:49 2022...

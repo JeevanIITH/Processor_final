@@ -1,0 +1,12 @@
+
+{ 
+    crc :  8768847407302222162  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto a474823dcd144881a1d6bc608361c727 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_p1_2_func_synth xil_defaultlib.Test_p1_2" , 
+    buildDate : "May 24 2019" , 
+    buildTime : "14:51:52" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/Test_p1_2_func_synth/xsimk\"   \"xsim.dir/Test_p1_2_func_synth/obj/xsim_0.lnx64.o\" \"xsim.dir/Test_p1_2_func_synth/obj/xsim_1.lnx64.o\" \"xsim.dir/Test_p1_2_func_synth/obj/xsim_2.lnx64.o\" \"xsim.dir/Test_p1_2_func_synth/obj/xsim_3.lnx64.o\" \"xsim.dir/Test_p1_2_func_synth/obj/xsim_4.lnx64.o\" \"xsim.dir/Test_p1_2_func_synth/obj/xsim_5.lnx64.o\" -L\"/tools/Xilinx/Vivado/2019.1/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

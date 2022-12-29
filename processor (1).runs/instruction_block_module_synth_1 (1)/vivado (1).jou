@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Dec 29 10:21:43 2022
+# Process ID: 7581
+# Current directory: /home/lab/JeevanS/processor-vivado/final_processor/processor/processor.runs/instruction_block_module_synth_1
+# Command line: vivado -log instruction_block_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source instruction_block_module.tcl
+# Log file: /home/lab/JeevanS/processor-vivado/final_processor/processor/processor.runs/instruction_block_module_synth_1/instruction_block_module.vds
+# Journal file: /home/lab/JeevanS/processor-vivado/final_processor/processor/processor.runs/instruction_block_module_synth_1/vivado.jou
+#-----------------------------------------------------------
+source instruction_block_module.tcl -notrace
