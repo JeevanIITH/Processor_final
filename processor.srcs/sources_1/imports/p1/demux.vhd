@@ -29,6 +29,8 @@ use ieee.numeric_std.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+-- it is used to enable one module in ALU , the output can be 00000001000 , 00000000001 , 000010000 , where ever '1' appear the module mapped to the bit is enabled
 entity demux is
     Port ( sel : in  STD_LOGIC_VECTOR (3 downto 0);
            output : out  STD_LOGIC_VECTOR (15 downto 0));

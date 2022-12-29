@@ -29,12 +29,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+--------- it will help to select data from alu or memory
+
 entity mux_mem is
     Port ( mem : in  STD_LOGIC_VECTOR (31 downto 0);
            alu : in  STD_LOGIC_VECTOR (31 downto 0);
            mem_to_reg : in  STD_LOGIC;
            to_reg : out  STD_LOGIC_VECTOR (31 downto 0));
 end mux_mem;
+
 
 architecture Behavioral of mux_mem is
 

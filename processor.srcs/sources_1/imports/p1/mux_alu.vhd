@@ -29,6 +29,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+------  mux for alu input , select immedite or "read data 2 from registers "
+
 entity mux_alu is
     Port ( read_data_2 : in  STD_LOGIC_VECTOR (31 downto 0);
            immediate : in  STD_LOGIC_VECTOR (31 downto 0);

@@ -29,6 +29,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+--- mux for jump 
+
 entity jump_mux is
     Port ( sel : in  STD_LOGIC;
            jump1 : in  STD_LOGIC_VECTOR (27 downto 0);

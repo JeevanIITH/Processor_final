@@ -29,6 +29,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+----------- it will shift left by 2
+
 entity jump_shift_left_2 is
     Port ( a : in  STD_LOGIC_VECTOR (25 downto 0);
            b : out  STD_LOGIC_VECTOR (27 downto 0));

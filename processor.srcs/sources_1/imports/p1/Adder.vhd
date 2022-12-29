@@ -31,6 +31,8 @@ use ieee.numeric_std.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+---- This adder is used in Dot product unit
+
 entity Adder is
     Port ( x1 : in STD_LOGIC_VECTOR (63 downto 0);
            x2 : in STD_LOGIC_VECTOR (63 downto 0);

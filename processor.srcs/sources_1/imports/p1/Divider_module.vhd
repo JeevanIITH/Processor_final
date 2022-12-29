@@ -30,6 +30,9 @@ use ieee.std_logic_unsigned.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+--- it will change the sign of input if it is negetive number like -40 to 40 after result  the quotient is converted into negetive number
+
 entity Divider_module is
     Port ( clock : in  STD_LOGIC;
            m : in  STD_LOGIC_VECTOR (31 downto 0);

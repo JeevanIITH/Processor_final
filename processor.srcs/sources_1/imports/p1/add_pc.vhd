@@ -30,6 +30,8 @@ use ieee.std_logic_unsigned.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+--- this module is used for increment of pc counter
+
 entity add_pc is
     Port ( a : in  STD_LOGIC_VECTOR (31 downto 0);
            output : out  STD_LOGIC_VECTOR (31 downto 0));

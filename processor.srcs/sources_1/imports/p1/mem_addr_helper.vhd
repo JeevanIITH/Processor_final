@@ -29,6 +29,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+
+-----------  since the memory address bus is not 32 , we are using this module
+
 entity mem_addr_helper is
     Port ( a : in  STD_LOGIC_VECTOR (31 downto 0);
            address : out  STD_LOGIC_VECTOR (11 downto 0));

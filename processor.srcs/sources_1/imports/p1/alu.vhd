@@ -23,14 +23,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 USE ieee.numeric_std.ALL;
 use ieee.std_logic_unsigned.all;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity alu is
     Port ( s: in std_logic_vector( 3 downto 0) ;   -- select 
@@ -90,6 +83,7 @@ architecture Behavioral of alu is
 	
 	end component;
 	
+	-- Signed divider
 	 component Divider_module is
     Port ( clock : in  STD_LOGIC;
            m : in  STD_LOGIC_VECTOR (31 downto 0);
@@ -156,6 +150,8 @@ architecture Behavioral of alu is
 			r : out  STD_LOGIC_vector(31 downto 0));
 	end component ;
 	
+
+	-- this enable demux bus helps to enable and disable certain modules .
 	component enable_demux_bus is 
 	    Port ( a : in  STD_LOGIC_VECTOR (15 downto 0);
 			  e0 : out std_logic;
@@ -200,12 +196,14 @@ architecture Behavioral of alu is
 	signal a_or_bit,b_or_bit , r_or_bit :std_logic_vector (31 downto 0);
 	signal a_xor_bit,b_xor_bit , r_xor_bit :std_logic_vector (31 downto 0);
 	
+	--signal for shift operations 
 	signal r_shift_left,r_shift_right , r_set_less : std_logic_vector(31 downto 0);
 	signal c : std_logic_vector(31 downto 0):="00000000000000000000000000000001";
 
-	
+	-- used for subtracion , like compute 2's complement
 	signal invert : std_logic ;
 	
+	--enable signals 
 	signal enable_add , enable_mul , enable_div ,enable_extra:  std_logic ;
 	signal enable1, enable2 , enable3 , enable4 : std_logic;
 	signal enable5, enable6 , enable7 , enable8 : std_logic;
@@ -231,70 +229,34 @@ begin
 	set_less_than : set_less_module port map(a=>A,b=>B,clock=>clock ,enable=>enable4,r=>r_set_less );
 
 	enable_bus_module : enable_demux_bus port map(enable_bus,enable1,enable2 , enable3 , enable4 , enable5 , enable6 , enable7 , enable8 , enable9 , enable10 , enable11 , enable12 , enable13 , enable14 , enable15 , enable16);
-	--enable_bus <= enable1 & enable2 & enable3 &enable_add & enable_mul & enable_div & enable4 & enable5 & enable6 & enable7 & enable8 & enable9 & enable10 & enable11 & enable12 & enable_extra;
+	
 	alu_select : demux port map(s,enable_bus);
-	--counter : counter_module port map(clock=>clock,reset=> (reset_counter_signal or reset),output_counter=>output_counter);
+	
 	process( clock, s ,A ,B ,cin , r_and_bit , r_or_bit , r_xor_bit , r_adder ,r_mult, sr_mult ,q_div, r_div , r_shift_left , r_set_less , r_shift_right , q_div  ) 
 	begin 
 			
 		case s is 
 			--AND module
 			when "0000" =>  r<=r_and_bit; sr<="00000000000000000000000000000000"; 
-								-- if output_counter="000001" then
-								-- 	status <='1';
-								-- 	reset_counter_signal <='1';
-								-- else
-								-- 	status <='0';
-								-- 	reset_counter_signal <='0';
-								-- end if ;
+								
 			
 			--OR module 
 			when "0001" =>  r<= r_or_bit;  sr<="00000000000000000000000000000000";
-								-- if output_counter="000001" then
-								-- 	status <='1';
-								-- 	reset_counter_signal <='1';
-								-- else
-								-- 	status <='0';
-								-- 	reset_counter_signal <='0';
-								-- end if ;
+								
 			--XOR module 
 			when "0011" =>  r<=r_xor_bit;   sr<="00000000000000000000000000000000";
-								-- if output_counter="000001" then
-								-- 	status <='1';
-								-- 	reset_counter_signal <='1';
-								-- else
-								-- 	status <='0';
-								-- 	reset_counter_signal <='0';
-								-- end if ;
+								
 			--ADDER module
 			when "0010" => invert <='0'; cin_adder <=cin   ; r<=r_adder ; sr<="00000000000000000000000000000000";
-								-- if output_counter="000001" then
-								-- 	status <='1';
-								-- 	reset_counter_signal <='1';
-								-- else
-								-- 	status <='0';
-								-- 	reset_counter_signal <='0';
-								-- end if ;
+								
 			-- Subtract
 			when "0110" => invert <='1'; cin_adder <=cin  ; r<=r_adder ; sr<="00000000000000000000000000000000";
-								-- if output_counter="000001" then
-								-- 	status <='1';
-								-- 	reset_counter_signal <='1';
-								-- else
-								-- 	status <='0';
-								-- 	reset_counter_signal <='0';
-								-- end if ;
+								
 			
 
 			--set less than 
 			when "0111" => r<=r_set_less; sr<="00000000000000000000000000000000";
-								-- if output_counter="000001" then
-								-- 	status <='1';
-								-- 	reset_counter_signal <='1';
-								-- else
-								-- 	status <='0';
-								-- 	reset_counter_signal <='0';
-								-- end if ;
+								
 
 
 
@@ -303,59 +265,25 @@ begin
 
 			--shift left operation 
 			when "1100"=>   r<=r_shift_left; sr<="00000000000000000000000000000000";
-								-- if output_counter="000001" then
-								-- 	status <='1';
-								-- 	reset_counter_signal <='1';
-								-- else
-								-- 	status <='0';
-								-- 	reset_counter_signal <='0';
-								-- end if ;
+								
 			
 			--shift right operation 
 			when "1101"=>   r<=r_shift_right; sr<="00000000000000000000000000000000";
-								-- if output_counter="000001" then
-								-- 	status <='1';
-								-- 	reset_counter_signal <='1';
-								-- else
-								-- 	status <='0';
-								-- 	reset_counter_signal <='0';
-								-- end if ;
+								
 			
 			--MULTIPLIER module
-			when "1110" =>     r<=r_mult;          --str_mult <='0'
-							--if rising_edge(clock) then
-					
-								-- if output_counter="100000" then
-								-- 	status <='1';
-								-- 	reset_counter_signal <='1';
-								-- else
-								-- 	status <='0';
-								-- 	reset_counter_signal <='0';
-								-- end if ;
-
-							--end if ;
+			when "1110" =>     r<=r_mult;          
+							
 							sr<="00000000000000000000000000000000";
 			
 			--DIVISER module
 			when "1111" =>    r<=q_div; sr<=r_div ;
-							-- if output_counter="100001" then
-							-- 	status <='1';
-							-- 	reset_counter_signal <='1';
-							-- else
-							-- 	status <='0';
-							-- 	reset_counter_signal <='0';
-							-- end if ;
+							
 							
 			       
 			
 			when others => r<="00000000000000000000000000000000";  sr<="00000000000000000000000000000000";
-								-- if output_counter="000001" then
-								-- 	status <='1';
-								-- 	reset_counter_signal <='1';
-								-- else
-								-- 	status <='0';
-								-- 	reset_counter_signal <='0';
-								-- end if ;
+								
 		end case;
 		 
 		

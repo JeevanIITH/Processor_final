@@ -29,6 +29,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+-- This mux is used at register file ..
+
 entity mux_reg is
     Port ( sel2 : in  STD_LOGIC_VECTOR (4 downto 0);
            sel3 : in  STD_LOGIC_VECTOR (4 downto 0);

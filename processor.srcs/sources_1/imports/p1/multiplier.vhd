@@ -31,6 +31,9 @@ use ieee.numeric_std.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+-----------multiplier used in dot product unit 
+
 entity multiplier is
     Port ( a : in STD_LOGIC_VECTOR (31 downto 0);
            b : in STD_LOGIC_VECTOR (31 downto 0);

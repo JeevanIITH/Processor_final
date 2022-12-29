@@ -32,6 +32,9 @@ use ieee.std_logic_unsigned.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+---- Register file for Dot product 
+
 entity Register_Dot is
     generic(INIT_FILE : string := "registers_dot.txt");
     Port ( clock : in  STD_LOGIC;

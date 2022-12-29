@@ -29,6 +29,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+---- mux for dot product unit it is used to store data into memory , eithers from main register or dot product register 
+
+
 entity dot_mux_module is
     Port ( sel : in  STD_LOGIC;
            registers : in  STD_LOGIC_VECTOR (31 downto 0);

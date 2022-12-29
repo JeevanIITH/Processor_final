@@ -48,6 +48,9 @@ end processor;
 
 architecture Behavioral of processor is
 
+
+	----- each component module port details are mentioned in their respective vhd file
+
 	component alu is 
 	
 		    Port ( s: in std_logic_vector( 3 downto 0) ;   -- select 
@@ -336,13 +339,15 @@ begin
 		pc_plus_four : add_pc port map(a=> pc_signal , output=> pc_plus_4_signal );
 		pc_plus_immediate : add_branch port map(a=>pc_plus_4_signal ,      b=>shift_left_2_signal , output=>  pc_add_immediate_signal );
 		shift_left_two : shift_left_2 port map(a=> immediate_extend,  output=> shift_left_2_signal);
-		zero_module : zero_m port map(r=>alu_result_1, zero=> zero_signal);
+		zero_module : zero_m port map(r=>alu_result_1, zero=> zero_signal);			-- used for branch module
 		branch_and_module : branch_and port map(a=>branch_s ,b=> zero_signal ,o=> branch_and_signal );
 
+		--  used for selecting either of pc +4  or pc+4 + immediate
 		mux_pc : pc_mux port map(pc_4=>pc_plus_4_signal , immediate=>  pc_add_immediate_signal , sel=>  branch_and_signal , 	output1=>pc_4_imm_signal );
 		
 		mux_jump : jump_mux port map(sel=>jump_signal ,jump2=>pc_plus_4_signal(31 downto 28) , jump1 =>jump_address_28 ,  pc_4_imm =>pc_4_imm_signal , pc_final=>pc_final );
 		
+		-- contains pc counter
 		pc_main_module : pc_main port map (pc_in=>pc_final ,clock=> clock , reset=> pc_reset  ,pc_write=> pc_go_next_signal_alu, pc_enable=> pc_go_next_signal_alu,  pc_out=>  pc_signal );
 		pc_main_extend : pc_main_helper port map( pc_in=> pc_signal, to_adder=>  pc_adder_signal ,  to_memory=>  pc_to_instr);
 		
@@ -350,7 +355,7 @@ begin
 		
 		instruction_block : instruction_block_module port map(clka=> clock , wea=>wea_signal , addra => pc_signal ,dina=>dina_signal , douta=> instr_full  );
 		op_code  <= instr_full(31 downto 26);
-		sel_reg_a <= instr_full(25 downto 21);
+		sel_reg_a <= instr_full(25 downto 21);			--- helps to sel regA , regB , regC
 		sel_reg_b <= instr_full(20 downto 16);
 		
 		sign_ext : sign_extend port map(a_bit=>instr_full(15 downto 0), b_bit=> immediate_extend);
@@ -366,13 +371,17 @@ begin
 		alu1 : alu port map(s=>	alu_control_line_s,clock=>clock,  A=>	alu_in_1,	B=>alu_in_2,cin=> '0' , r=>  alu_result_1 ,  sr=>alu_result_2  ,	reset=>pc_reset,
 									shamt=>	instr_full(10 downto 6), cout=>  alu_out_m);
 		
+		-- helps for memory address bus trimming
 		mem_helper : mem_addr_helper port map(a=>alu_result_1,address=>address_to_memory );
 		alu_control_unit : alu_control port map(ALU_op=>alu_op_s ,funct=> instr_full(5 downto 0) ,count=>alu_count , alu_control_input=>alu_control_line_s);
 		
 		--memory_unit : memory port map(clock , address_to_memory ,mem_write_s , read_data_2 , mem_read_s , read_data  );
 		memory_unit : memory_block_module port map(clka=>clock , ena=> mem_read_s , wea=> mem_write_s , addra=> alu_result_1 , dina=>write_data_to_memory_unit, douta=>read_data );
 		memory_mux : mux_mem port map(mem=>read_data , alu=> alu_result_1 ,mem_to_reg=> mem_to_reg_s , to_reg=>reg_w_s);
+		
 		alu_mux : mux_alu port map (read_data_2=> read_data_2 ,immediate=> immediate_extend , alu_src=>alu_src_s , alu_input_2=>alu_in_2 );
+		
+		---- Used for dot product 
 		write_data_mux_mem : dot_mux_module port map(sel=>dot_sel_control_signal , registers=>read_data_2 , dot=>dot_prod_result , dout=>write_data_to_memory_unit );
 
 		dot_product_unit : dot_prod_module port map(clock=>clock , din=>reg_w_s , read_enable=>dot_read_enable ,sel_register=>sel_reg_b(2 downto 0) , sel_result =>dot_sel_result , write_enable=>dot_write_enable , result=>dot_prod_result ); 

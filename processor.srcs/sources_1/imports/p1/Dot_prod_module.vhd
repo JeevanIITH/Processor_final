@@ -31,6 +31,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+-- dot product unit ..................
+
+
 entity Dot_prod_module is
     Port ( clock : in STD_LOGIC;
            din : in std_logic_vector(31 downto 0 );
@@ -87,6 +90,7 @@ begin
     mult4 : multiplier port map(a=>x4,b=>y4, result=>result4 , clock=>clock );
     Acc : Adder port map(x1=>result1,x2=>result2 , x3=>result3 , x4=>result4 , result(31 downto 0)=>final_result1, result(63 downto 32)=> final_result2 , cout=>cout_reg);
     
+    ----- result(  63 downt0 32 )   or  result( 31 downto 0 )
     process(sel_result , final_result1 , final_result2 )
     begin 
         if sel_result = '1' then

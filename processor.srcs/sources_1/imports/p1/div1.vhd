@@ -30,11 +30,14 @@ use ieee.std_logic_unsigned.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+--performs m/d integer division 
+-- q quotient  , r remainder , the remainder is store in additional register in register file 
+
 entity div1 is
 
 	port (			clock:in std_logic;
-						d: in std_logic_vector(31 downto 0);
-						m:in std_logic_vector(31 downto 0);
+						d: in std_logic_vector(31 downto 0);        -- dividend
+						m:in std_logic_vector(31 downto 0);         -- 
 						q:out std_logic_vector(31 downto 0);
 						r:out std_logic_vector(31 downto 0);
 						reset : in std_logic;
@@ -52,15 +55,15 @@ begin
 	process(clock,m,d , enable,reset )
 	
 	variable i:integer;
-	variable t:std_logic_vector(31 downto 0);
+	variable t:std_logic_vector(31 downto 0);   --- to hold current shifted 'M'
 	
 	begin
 		if(reset='1') then 
-			reg1<="00000000000000000000000000000000";
+			reg1<="00000000000000000000000000000000";               -- to store current subtracted result
 			reg2<="00000000000000000000000000000000";
-			reg_q<="00000000000000000000000000000000";
+			reg_q<="00000000000000000000000000000000";              
 			t:="00000000000000000000000000000000";
-			i:=31;
+			i:=31;                                  -- to track downt the bit possition , it will reach until 31 from 0
 		elsif(enable='1') then
                   if ( rising_edge(clock) )  then
                     

@@ -31,6 +31,9 @@ use ieee.std_logic_unsigned.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+---------multiplier module
+
 entity MUlT is
     Port ( M : in  STD_LOGIC_VECTOR (31 downto 0);
            Q : in  STD_LOGIC_VECTOR (31 downto 0);

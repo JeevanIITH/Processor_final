@@ -29,6 +29,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+---- since the instruction block address is not 32 bit , we use helper
+
 entity pc_main_helper is
     Port ( pc_in : in  STD_LOGIC_VECTOR (31 downto 0);
             to_adder : out std_logic_vector(31 downto 0 );

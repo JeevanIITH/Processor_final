@@ -33,6 +33,8 @@ use std.textio.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+------- Main register File 
+
 entity register_file is
     generic(INIT_FILE : string := "register.txt");
     Port ( reg_a : out  STD_LOGIC_VECTOR (31 downto 0);

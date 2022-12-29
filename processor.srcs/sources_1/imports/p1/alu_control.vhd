@@ -29,6 +29,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+
+
+-- alu control module
+
+-- the count port indicated that a operation took certain number of cycles .
+
 entity alu_control is
     Port ( ALU_op : in  STD_LOGIC_VECTOR (1 downto 0);
            funct : in  STD_LOGIC_VECTOR (5 downto 0);
@@ -42,12 +49,12 @@ begin
     process(ALU_op , funct)
 	 begin 
         if ALU_op="01" then
-            alu_control_input <= "0110";            -- branch equal do subtract
-            count <= 1;
+            alu_control_input <= "0110";            -- branch equal , perform subtract
+            count <= 1;                             -- the beq operation takes 1 clock cycle
         end if ;
 
         if ALU_op ="00" then
-            alu_control_input <= "0010";            -- load word do addition
+            alu_control_input <= "0010";            -- load word store word , add immediate -- perform addition
             count <= 1;
         end if ;
 

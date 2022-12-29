@@ -36,25 +36,25 @@ use ieee.numeric_std.all;
 
 entity Control_Unit is
 	Port ( 
-				op_code : in std_logic_vector ( 5 downto 0 ) ;
-				clock : in std_logic ; 
-				reset : in std_logic;
-				ALU_Src : out std_logic;
-				Mem_write :out std_logic_vector(3 downto 0);
-				Reg_write :out std_logic;
-				Reg_dst :out std_logic;
-				ALU_op : out std_logic_vector( 1 downto 0 ) ;
-				Mem_to_reg : out std_logic;
-				Mem_read : out std_logic;
-				Branch : out std_logic;
-				Jump :out std_logic ;
-				alu_count : in integer;
-				status : out std_logic;
-				dot_mux_sel: out std_logic;
-				dot_read_enable : out std_logic;
-				dot_sel_result : out std_logic;
-				dot_write_enable : out std_logic;
-				sel_additional_register : out std_logic
+				op_code : in std_logic_vector ( 5 downto 0 ) ;				-- opcode from instruction
+				clock : in std_logic ; 										-- clock
+				reset : in std_logic;										-- reset
+				ALU_Src : out std_logic;									-- ALU src , select register value or immediate for alu input
+				Mem_write :out std_logic_vector(3 downto 0);				-- control whether memory is enable for write
+				Reg_write :out std_logic;									-- enable reg write
+				Reg_dst :out std_logic;										-- used for selecting either of instr(20 -16) or instr(15-11) for write into register
+				ALU_op : out std_logic_vector( 1 downto 0 ) ;				-- opcode for alu control unit
+				Mem_to_reg : out std_logic;									-- select data from either alu or memory
+				Mem_read : out std_logic;									--enable memory read
+				Branch : out std_logic;										--enable branch
+				Jump :out std_logic ;										--enable Jump
+				alu_count : in integer;										-- gets no of cycles for operations
+				status : out std_logic;										-- used for indication pc to move next
+				dot_mux_sel: out std_logic;									-- used to store data in dot product unit instead of register
+				dot_read_enable : out std_logic;							-- used to compute and store result in memory
+				dot_sel_result : out std_logic;								-- used to select extended result of dot product operation
+				dot_write_enable : out std_logic;							-- used to load data into register and write
+				sel_additional_register : out std_logic						-- used to move data from regsiter mfhi(additional)
 				);
 end Control_Unit;
 
@@ -69,7 +69,8 @@ architecture Behavioral of Control_Unit is
 	signal combine_reset_counter : std_logic;
 	
 begin
-	counter : counter_module port map(clock=>clock , reset=>combine_reset_counter , output_counter=>output_counter_signal );
+	--- this counter wll start counting the number of clock cycles elapsed 
+	counter : counter_module port map(clock=>clock , reset=>combine_reset_counter , output_counter=>output_counter_signal );	
     combine_reset_counter <= reset_counter_signal or reset ;
 	process( clock ,alu_count )
 		begin 
@@ -78,7 +79,7 @@ begin
 				 
 				case Op_code is
 					when "000000" =>
-					-- depends on function code 
+					-- depends on function code   R format
 						ALU_op<="10";
 						Reg_dst<='1';
 						ALU_Src<='0';
@@ -239,23 +240,7 @@ begin
 							reset_counter_signal <= '0' ;
 							status <= '0';
 						end if ;
-					---comparision instruction
-					-- when "001010" =>
-					-- --set less than imm
 					
-					-- when "001011" =>
-					-- --set less than imm unsigned
-					
-					 --when "001100" =>
-					-- -- AND imm
-						--Branch <= '0';
-						
-					
-					-- when "001101" =>
-					-- -- OR imm 
-					
-					-- when "001110" =>
-					--XOR immediate
 					
 
 					-------------------------------------------
@@ -279,6 +264,9 @@ begin
 						dot_sel_result <= '0';
 						dot_write_enable <= '0';
 						sel_additional_register <= '0';
+
+
+						-- load data into dot product unit registers
 					when "111100" =>
 						ALU_op<="00";
 						Reg_dst<='0';
@@ -305,6 +293,8 @@ begin
 						dot_write_enable <= '1';
 						sel_additional_register <= '0';
 
+
+						-- perform  dot product  and store result into memory 
 					when "111101" =>
 						ALU_op<="00";
 						Reg_dst<='0';
@@ -331,7 +321,8 @@ begin
 						dot_sel_result <= '0';
 						dot_write_enable <= '0';
 						sel_additional_register <= '0';
-
+					
+					-- store the extend result into memory from dot product unti  result(63 downto 0)
 					when "111110" =>
 						ALU_op<="00";
 						Reg_dst<='0';
