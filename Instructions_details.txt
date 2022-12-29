@@ -19,6 +19,7 @@ jump  Addr
 dlw
 dsw1
 
+Instructions can be loaded by modifying instruction_init.coe file .
 
 To load data from memory to dot product unit :
 
