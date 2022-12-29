@@ -1,0 +1,181 @@
+ISim log file
+Running: D:\vhdl_github_2\cop2\Processor_ISE\testbench_processor_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/vhdl_github_2/cop2/Processor_ISE/testbench_processor_isim_beh.wdb 
+ISim P.15xf (signature 0xc3576ebc)
+----------------------------------------------------------------------
+INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - For more information or for assistance in obtaining 
+ a license, please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses".)
+INFO:Security:68a - user is HP, on host LAPTOP-8L9226N5.
+ERROR:Security:14 - No feature was available for 'ISIM'.
+
+No such feature exists.
+Feature:       ISIM
+License path:  C:/.Xilinx\Xilinx.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/data\*.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/coregen/core_licenses\Xilinx.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/coregen/core_licenses\XilinxFree.lic;J:\xilinx_ise\14.1\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
+FLEXnet Licensing error:-5,357
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.acresso.com".
+----------------------------------------------------------------------
+WARNING: A full ISim License cannot be checked out due to the issues listed above. Please use Xilinx License Configuration Manager to fix these issues in order to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/pc_plus_four/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 5 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/instruction_block/U0/native_mem_module/mem_module/).
+at 5 ns(1), Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 65 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/memory_unit/U0/native_mem_module/mem_module/).
+
+** Failure:ok
+User(VHDL) Code Called Simulation Stop
+In process testbench_processor.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim P.15xf (signature 0xc3576ebc)
+----------------------------------------------------------------------
+INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - For more information or for assistance in obtaining 
+ a license, please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses".)
+INFO:Security:68a - user is HP, on host LAPTOP-8L9226N5.
+ERROR:Security:14 - No feature was available for 'ISIM'.
+
+No such feature exists.
+Feature:       ISIM
+License path:  C:/.Xilinx\Xilinx.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/data\*.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/coregen/core_licenses\Xilinx.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/coregen/core_licenses\XilinxFree.lic;J:\xilinx_ise\14.1\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
+FLEXnet Licensing error:-5,357
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.acresso.com".
+----------------------------------------------------------------------
+WARNING: A full ISim License cannot be checked out due to the issues listed above. Please use Xilinx License Configuration Manager to fix these issues in order to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/pc_plus_four/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 5 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/instruction_block/U0/native_mem_module/mem_module/).
+at 5 ns(1), Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 65 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/memory_unit/U0/native_mem_module/mem_module/).
+
+** Failure:ok
+User(VHDL) Code Called Simulation Stop
+In process testbench_processor.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim P.15xf (signature 0xc3576ebc)
+----------------------------------------------------------------------
+INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - For more information or for assistance in obtaining 
+ a license, please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses".)
+INFO:Security:68a - user is HP, on host LAPTOP-8L9226N5.
+ERROR:Security:14 - No feature was available for 'ISIM'.
+
+No such feature exists.
+Feature:       ISIM
+License path:  C:/.Xilinx\Xilinx.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/data\*.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/coregen/core_licenses\Xilinx.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/coregen/core_licenses\XilinxFree.lic;J:\xilinx_ise\14.1\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
+FLEXnet Licensing error:-5,357
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.acresso.com".
+----------------------------------------------------------------------
+WARNING: A full ISim License cannot be checked out due to the issues listed above. Please use Xilinx License Configuration Manager to fix these issues in order to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/pc_plus_four/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/instruction_block/U0/native_mem_module/mem_module/).
+at 10 ns(1), Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 130 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/memory_unit/U0/native_mem_module/mem_module/).
+# restart
+# run all
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/instruction_block/U0/native_mem_module/mem_module/).
+at 10 ns(1), Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 130 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/memory_unit/U0/native_mem_module/mem_module/).
+
+** Failure:ok
+User(VHDL) Code Called Simulation Stop
+In process testbench_processor.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.
+ISim P.15xf (signature 0xc3576ebc)
+----------------------------------------------------------------------
+INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - For more information or for assistance in obtaining 
+ a license, please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses".)
+INFO:Security:68a - user is HP, on host LAPTOP-8L9226N5.
+ERROR:Security:14 - No feature was available for 'ISIM'.
+
+No such feature exists.
+Feature:       ISIM
+License path:  C:/.Xilinx\Xilinx.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/data\*.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/coregen/core_licenses\Xilinx.lic;J:\xilinx_ise\14.1\ISE_DS\ISE\/coregen/core_licenses\XilinxFree.lic;J:\xilinx_ise\14.1\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
+FLEXnet Licensing error:-5,357
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.acresso.com".
+----------------------------------------------------------------------
+WARNING: A full ISim License cannot be checked out due to the issues listed above. Please use Xilinx License Configuration Manager to fix these issues in order to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/pc_plus_four/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/instruction_block/U0/native_mem_module/mem_module/).
+at 10 ns(1), Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 130 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/memory_unit/U0/native_mem_module/mem_module/).
+# restart
+# run all
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/registers/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/instruction_block/U0/native_mem_module/mem_module/).
+at 10 ns(1), Instance /testbench_processor/uut/controller/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 130 ns(1): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/testbench_processor/uut/memory_unit/U0/native_mem_module/mem_module/).
+
+** Failure:ok
+User(VHDL) Code Called Simulation Stop
+In process testbench_processor.vhd:stim_proc 
+ 
+INFO: Simulator is stopped.

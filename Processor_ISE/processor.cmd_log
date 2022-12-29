@@ -1,0 +1,24 @@
+xst -intstyle ise -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -ifn "D:/vhdl_github_2/cop2/Processor_ISE/processor.xst" -ofn "D:/vhdl_github_2/cop2/Processor_ISE/processor.syr" 
+xst -intstyle ise -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -ifn "D:/vhdl_github_2/cop2/Processor_ISE/processor.xst" -ofn "D:/vhdl_github_2/cop2/Processor_ISE/processor.syr" 
+xst -intstyle ise -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -ifn "D:/vhdl_github_2/cop2/Processor_ISE/processor.xst" -ofn "D:/vhdl_github_2/cop2/Processor_ISE/processor.syr" 
+xst -intstyle ise -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -ifn "D:/vhdl_github_2/cop2/Processor_ISE/processor.xst" -ofn "D:/vhdl_github_2/cop2/Processor_ISE/processor.syr" 
+xst -intstyle ise -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -ifn "D:/vhdl_github_2/cop2/Processor_ISE/processor.xst" -ofn "D:/vhdl_github_2/cop2/Processor_ISE/processor.syr" 
+xst -intstyle ise -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -ifn "D:/vhdl_github_2/cop2/Processor_ISE/processor.xst" -ofn "D:/vhdl_github_2/cop2/Processor_ISE/processor.syr" 
+xst -intstyle ise -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -ifn "D:/vhdl_github_2/cop2/Processor_ISE/processor.xst" -ofn "D:/vhdl_github_2/cop2/Processor_ISE/processor.syr" 
+xst -intstyle ise -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -ifn "D:/vhdl_github_2/cop2/Processor_ISE/processor.xst" -ofn "D:/vhdl_github_2/cop2/Processor_ISE/processor.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 processor.ngc processor.ngd  
+map -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o processor_map.ncd processor.ngd processor.pcf 
+map -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o processor_map.ncd processor.ngd processor.pcf 
+xst -intstyle ise -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -ifn "D:/vhdl_github_2/cop2/Processor_ISE/processor.xst" -ofn "D:/vhdl_github_2/cop2/Processor_ISE/processor.syr" 
+xst -intstyle ise -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -ifn "D:/vhdl_github_2/cop2/Processor_ISE/processor.xst" -ofn "D:/vhdl_github_2/cop2/Processor_ISE/processor.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I processor.ngc processor.ngd  
+map -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o processor_map.ncd processor.ngd processor.pcf 
+map -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o processor_map.ncd processor.ngd processor.pcf 
+par -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off processor_map.ncd processor.ncd processor.pcf 
+trce -filter D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml processor.twx processor.ncd -o processor.twr processor.pcf 
+xst -intstyle ise -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -ifn "D:/vhdl_github_2/cop2/Processor_ISE/processor.xst" -ofn "D:/vhdl_github_2/cop2/Processor_ISE/processor.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I processor.ngc processor.ngd  
+map -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o processor_map.ncd processor.ngd processor.pcf 
+par -filter "D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off processor_map.ncd processor.ncd processor.pcf 
+trce -filter D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml processor.twx processor.ncd -o processor.twr processor.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f processor.ut processor.ncd 

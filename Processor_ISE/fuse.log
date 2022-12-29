@@ -1,0 +1,125 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "D:/vhdl_github_2/cop2/Processor_ISE/testbench_processor_isim_beh.exe" -prj "D:/vhdl_github_2/cop2/Processor_ISE/testbench_processor_beh.prj" "work.testbench_processor" 
+ISim P.15xf (signature 0xc3576ebc)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/one_bit_adder.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/Two_bit_adder.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/four_bit_adder.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/adder_8bit.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/two_complement.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/div1.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/add_enable.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/adder-16.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/xor_bit.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/Shift_right_module.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/shift_left_module.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/set_less_module.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/Register_Dot.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/or_bit.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/multiplier.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/MUlT.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/enable_demux_bus.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/Divider_module.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/demux.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/counter_module.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/AND.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/adder_32.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/Adder.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/zero_m.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/sign_extend.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/shift_left_2.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/register_file.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/pc_mux.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/pc_main_helper.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/pc_main.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/mux_reg.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/mux_mem.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/mux_alu.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/mem_addr_helper.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/memory_block_module.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/jump_shift_left_2.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/jump_mux.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/instruction_block_module.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/Dot_prod_module.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/dot_mux_module.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/Control_Unit.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/branch_and.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/alu_control.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/alu.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/add_pc.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/add_branch.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/processor.vhd" into library work
+Parsing VHDL file "D:/vhdl_github_2/cop2/Processor_ISE/testbench_processor.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package textio
+Compiling package std_logic_textio
+Compiling architecture behavioral of entity add_pc [add_pc_default]
+Compiling architecture behavioral of entity add_branch [add_branch_default]
+Compiling architecture behavioral of entity shift_left_2 [shift_left_2_default]
+Compiling architecture behavioral of entity zero_m [zero_m_default]
+Compiling architecture behavioral of entity branch_and [branch_and_default]
+Compiling architecture behavioral of entity pc_mux [pc_mux_default]
+Compiling architecture behavioral of entity jump_mux [jump_mux_default]
+Compiling architecture behavioral of entity pc_main [pc_main_default]
+Compiling architecture behavioral of entity pc_main_helper [pc_main_helper_default]
+Compiling architecture behavioral of entity jump_shift_left_2 [jump_shift_left_2_default]
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_1_output_stage [\BLK_MEM_GEN_V7_1_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_1_softecc_output_reg_stage [\BLK_MEM_GEN_V7_1_softecc_output...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_1_mem_module [\BLK_MEM_GEN_V7_1_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_1 [\BLK_MEM_GEN_V7_1("blk_mem_gen_v...]
+Compiling architecture instruction_block_module_a of entity instruction_block_module [instruction_block_module_default]
+Compiling architecture behavioral of entity sign_extend [sign_extend_default]
+Compiling architecture behavioral of entity mux_reg [mux_reg_default]
+Compiling architecture behavioral of entity register_file [\register_file("register.txt")(1...]
+Compiling architecture behavioral of entity counter_module [counter_module_default]
+Compiling architecture behavioral of entity Control_Unit [control_unit_default]
+Compiling architecture behavioral of entity add_enable [add_enable_default]
+Compiling architecture behavioral of entity two_complement [two_complement_default]
+Compiling architecture struct of entity one_bit_adder [one_bit_adder_default]
+Compiling architecture st1 of entity Two_bit_adder [two_bit_adder_default]
+Compiling architecture behavioral of entity four_bit_adder [four_bit_adder_default]
+Compiling architecture behavioral of entity adder_8bit [adder_8bit_default]
+Compiling architecture behavioral of entity adder_16 [adder_16_default]
+Compiling architecture behavioral of entity adder_32 [adder_32_default]
+Compiling architecture behavioral of entity MUlT [mult_default]
+Compiling architecture behavioral of entity div1 [div1_default]
+Compiling architecture behavioral of entity Divider_module [divider_module_default]
+Compiling architecture behavioral of entity and_bit [and_bit_default]
+Compiling architecture behavioral of entity or_bit [or_bit_default]
+Compiling architecture behavioral of entity xor_bit [xor_bit_default]
+Compiling architecture behavioral of entity shift_left_module [shift_left_module_default]
+Compiling architecture behavioral of entity Shift_right_module [shift_right_module_default]
+Compiling architecture behavioral of entity set_less_module [set_less_module_default]
+Compiling architecture behavioral of entity enable_demux_bus [enable_demux_bus_default]
+Compiling architecture behavioral of entity demux [demux_default]
+Compiling architecture behavioral of entity alu [alu_default]
+Compiling architecture behavioral of entity mem_addr_helper [mem_addr_helper_default]
+Compiling architecture behavioral of entity alu_control [alu_control_default]
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_1_output_stage [\BLK_MEM_GEN_V7_1_output_stage("...]
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_1_output_stage [\BLK_MEM_GEN_V7_1_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_1_softecc_output_reg_stage [\BLK_MEM_GEN_V7_1_softecc_output...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_1_mem_module [\BLK_MEM_GEN_V7_1_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_1 [\BLK_MEM_GEN_V7_1("blk_mem_gen_v...]
+Compiling architecture memory_block_module_a of entity memory_block_module [memory_block_module_default]
+Compiling architecture behavioral of entity mux_mem [mux_mem_default]
+Compiling architecture behavioral of entity mux_alu [mux_alu_default]
+Compiling architecture behavioral of entity dot_mux_module [dot_mux_module_default]
+Compiling architecture behavioral of entity Register_Dot [\Register_Dot("registers_dot.txt...]
+Compiling architecture behavioral of entity multiplier [multiplier_default]
+Compiling architecture behavioral of entity Adder [adder_default]
+Compiling architecture behavioral of entity Dot_prod_module [dot_prod_module_default]
+Compiling architecture behavioral of entity processor [processor_default]
+Compiling architecture behavior of entity testbench_processor
+Time Resolution for simulation is 1ps.
+Waiting for 45 sub-compilation(s) to finish...
+Compiled 120 VHDL Units
+Built simulation executable D:/vhdl_github_2/cop2/Processor_ISE/testbench_processor_isim_beh.exe
+Fuse Memory Usage: 55744 KB
+Fuse CPU Usage: 1655 ms

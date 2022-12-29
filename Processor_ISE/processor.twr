@@ -1,0 +1,72 @@
+--------------------------------------------------------------------------------
+Release 14.1 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+J:\xilinx_ise\14.1\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -filter
+D:/vhdl_github_2/cop2/Processor_ISE/iseconfig/filter.filter -intstyle ise -v 3
+-s 2I -n 3 -fastpaths -xml processor.twx processor.ncd -o processor.twr
+processor.pcf
+
+Design file:              processor.ncd
+Physical constraint file: processor.pcf
+Device,package,speed:     xa7a100t,csg324,I,-2I (ADVANCED 1.01 2012-04-23)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clock
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+pc_reset    |    4.621(R)|      SLOW  |    1.154(R)|      SLOW  |clock_BUFGP       |   0.000|
+            |    1.520(F)|      SLOW  |    0.198(F)|      SLOW  |clock_BUFGP       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clock to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+alu_out_m   |        23.265(R)|      SLOW  |         5.248(R)|      FAST  |clock_BUFGP       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |   19.941|    4.387|    1.598|         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Fri Dec 30 00:49:46 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5031 MB
+
+
+

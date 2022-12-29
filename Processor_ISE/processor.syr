@@ -1,0 +1,1474 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: processor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "processor.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "processor"
+Output Format                      : NGC
+Target Device                      : xa7a100t-2I-csg324
+
+---- Source Options
+Top Module Name                    : processor
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\one_bit_adder.vhd" into library work
+Parsing entity <one_bit_adder>.
+Parsing architecture <struct> of entity <one_bit_adder>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\Two_bit_adder.vhd" into library work
+Parsing entity <Two_bit_adder>.
+Parsing architecture <st1> of entity <two_bit_adder>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\four_bit_adder.vhd" into library work
+Parsing entity <four_bit_adder>.
+Parsing architecture <Behavioral> of entity <four_bit_adder>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\adder_8bit.vhd" into library work
+Parsing entity <adder_8bit>.
+Parsing architecture <Behavioral> of entity <adder_8bit>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\two_complement.vhd" into library work
+Parsing entity <two_complement>.
+Parsing architecture <Behavioral> of entity <two_complement>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\div1.vhd" into library work
+Parsing entity <div1>.
+Parsing architecture <Behavioral> of entity <div1>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\add_enable.vhd" into library work
+Parsing entity <add_enable>.
+Parsing architecture <Behavioral> of entity <add_enable>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\adder-16.vhd" into library work
+Parsing entity <adder_16>.
+Parsing architecture <Behavioral> of entity <adder_16>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\xor_bit.vhd" into library work
+Parsing entity <xor_bit>.
+Parsing architecture <Behavioral> of entity <xor_bit>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\Shift_right_module.vhd" into library work
+Parsing entity <Shift_right_module>.
+Parsing architecture <Behavioral> of entity <shift_right_module>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\shift_left_module.vhd" into library work
+Parsing entity <shift_left_module>.
+Parsing architecture <Behavioral> of entity <shift_left_module>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\set_less_module.vhd" into library work
+Parsing entity <set_less_module>.
+Parsing architecture <Behavioral> of entity <set_less_module>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\Register_Dot.vhd" into library work
+Parsing entity <Register_Dot>.
+Parsing architecture <Behavioral> of entity <register_dot>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\or_bit.vhd" into library work
+Parsing entity <or_bit>.
+Parsing architecture <Behavioral> of entity <or_bit>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\multiplier.vhd" into library work
+Parsing entity <multiplier>.
+Parsing architecture <Behavioral> of entity <multiplier>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\MUlT.vhd" into library work
+Parsing entity <MUlT>.
+Parsing architecture <Behavioral> of entity <mult>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\enable_demux_bus.vhd" into library work
+Parsing entity <enable_demux_bus>.
+Parsing architecture <Behavioral> of entity <enable_demux_bus>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\Divider_module.vhd" into library work
+Parsing entity <Divider_module>.
+Parsing architecture <Behavioral> of entity <divider_module>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\demux.vhd" into library work
+Parsing entity <demux>.
+Parsing architecture <Behavioral> of entity <demux>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\counter_module.vhd" into library work
+Parsing entity <counter_module>.
+Parsing architecture <Behavioral> of entity <counter_module>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\AND.vhd" into library work
+Parsing entity <and_bit>.
+Parsing architecture <Behavioral> of entity <and_bit>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\adder_32.vhd" into library work
+Parsing entity <adder_32>.
+Parsing architecture <Behavioral> of entity <adder_32>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\Adder.vhd" into library work
+Parsing entity <Adder>.
+Parsing architecture <Behavioral> of entity <adder>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\zero_m.vhd" into library work
+Parsing entity <zero_m>.
+Parsing architecture <Behavioral> of entity <zero_m>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\sign_extend.vhd" into library work
+Parsing entity <sign_extend>.
+Parsing architecture <Behavioral> of entity <sign_extend>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\shift_left_2.vhd" into library work
+Parsing entity <shift_left_2>.
+Parsing architecture <Behavioral> of entity <shift_left_2>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\register_file.vhd" into library work
+Parsing entity <register_file>.
+Parsing architecture <Behavioral> of entity <register_file>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\pc_mux.vhd" into library work
+Parsing entity <pc_mux>.
+Parsing architecture <Behavioral> of entity <pc_mux>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\pc_main_helper.vhd" into library work
+Parsing entity <pc_main_helper>.
+Parsing architecture <Behavioral> of entity <pc_main_helper>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\pc_main.vhd" into library work
+Parsing entity <pc_main>.
+Parsing architecture <Behavioral> of entity <pc_main>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\mux_reg.vhd" into library work
+Parsing entity <mux_reg>.
+Parsing architecture <Behavioral> of entity <mux_reg>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\mux_mem.vhd" into library work
+Parsing entity <mux_mem>.
+Parsing architecture <Behavioral> of entity <mux_mem>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\mux_alu.vhd" into library work
+Parsing entity <mux_alu>.
+Parsing architecture <Behavioral> of entity <mux_alu>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\mem_addr_helper.vhd" into library work
+Parsing entity <mem_addr_helper>.
+Parsing architecture <Behavioral> of entity <mem_addr_helper>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\memory_block_module.vhd" into library work
+Parsing entity <memory_block_module>.
+Parsing architecture <memory_block_module_a> of entity <memory_block_module>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\jump_shift_left_2.vhd" into library work
+Parsing entity <jump_shift_left_2>.
+Parsing architecture <Behavioral> of entity <jump_shift_left_2>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\jump_mux.vhd" into library work
+Parsing entity <jump_mux>.
+Parsing architecture <Behavioral> of entity <jump_mux>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\instruction_block_module.vhd" into library work
+Parsing entity <instruction_block_module>.
+Parsing architecture <instruction_block_module_a> of entity <instruction_block_module>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\Dot_prod_module.vhd" into library work
+Parsing entity <Dot_prod_module>.
+Parsing architecture <Behavioral> of entity <dot_prod_module>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\dot_mux_module.vhd" into library work
+Parsing entity <dot_mux_module>.
+Parsing architecture <Behavioral> of entity <dot_mux_module>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd" into library work
+Parsing entity <Control_Unit>.
+Parsing architecture <Behavioral> of entity <control_unit>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\branch_and.vhd" into library work
+Parsing entity <branch_and>.
+Parsing architecture <Behavioral> of entity <branch_and>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\alu_control.vhd" into library work
+Parsing entity <alu_control>.
+Parsing architecture <Behavioral> of entity <alu_control>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd" into library work
+Parsing entity <alu>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\add_pc.vhd" into library work
+Parsing entity <add_pc>.
+Parsing architecture <Behavioral> of entity <add_pc>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\add_branch.vhd" into library work
+Parsing entity <add_branch>.
+Parsing architecture <Behavioral> of entity <add_branch>.
+Parsing VHDL file "D:\vhdl_github_2\cop2\Processor_ISE\processor.vhd" into library work
+Parsing entity <processor>.
+Parsing architecture <Behavioral> of entity <processor>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <processor> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <add_pc> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <add_branch> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <shift_left_2> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <zero_m> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <branch_and> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <pc_mux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <jump_mux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <pc_main> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\pc_main.vhd" Line 53: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\pc_main.vhd" Line 59: pc_in should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\pc_main.vhd" Line 64: pc_curr_register should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "D:\vhdl_github_2\cop2\Processor_ISE\pc_main.vhd" Line 48: Assignment to pc_next_register ignored, since the identifier is never used
+
+Elaborating entity <pc_main_helper> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <jump_shift_left_2> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <instruction_block_module> (architecture <instruction_block_module_a>) from library <work>.
+
+Elaborating entity <sign_extend> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux_reg> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <register_file> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\register_file.vhd" Line 80: enable_write should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\register_file.vhd" Line 91: addition_register1 should be on the sensitivity list of the process
+
+Elaborating entity <Control_Unit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <counter_module> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd" Line 79: op_code should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd" Line 85: output_counter_signal should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd" Line 121: output_counter_signal should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd" Line 150: output_counter_signal should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd" Line 177: output_counter_signal should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd" Line 193: output_counter_signal should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd" Line 233: output_counter_signal should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd" Line 294: output_counter_signal should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd" Line 322: output_counter_signal should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd" Line 349: output_counter_signal should be on the sensitivity list of the process
+
+Elaborating entity <alu> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <adder_32> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <add_enable> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <two_complement> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <adder_16> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <adder_8bit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <four_bit_adder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Two_bit_adder> (architecture <st1>) from library <work>.
+
+Elaborating entity <one_bit_adder> (architecture <struct>) from library <work>.
+
+Elaborating entity <MUlT> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\MUlT.vhd" Line 63: i should be on the sensitivity list of the process
+
+Elaborating entity <Divider_module> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Divider_module.vhd" Line 72: m should be on the sensitivity list of the process
+
+Elaborating entity <div1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <and_bit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <or_bit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <xor_bit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <shift_left_module> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Shift_right_module> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <set_less_module> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <enable_demux_bus> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <demux> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mem_addr_helper> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <alu_control> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <memory_block_module> (architecture <memory_block_module_a>) from library <work>.
+
+Elaborating entity <mux_mem> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux_alu> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dot_mux_module> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Dot_prod_module> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Register_Dot> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Register_Dot.vhd" Line 74: write_enable should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Register_Dot.vhd" Line 81: registers should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Register_Dot.vhd" Line 82: registers should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Register_Dot.vhd" Line 83: registers should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Register_Dot.vhd" Line 84: registers should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Register_Dot.vhd" Line 85: registers should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Register_Dot.vhd" Line 86: registers should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Register_Dot.vhd" Line 87: registers should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\vhdl_github_2\cop2\Processor_ISE\Register_Dot.vhd" Line 88: registers should be on the sensitivity list of the process
+
+Elaborating entity <multiplier> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Adder> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:634 - "D:\vhdl_github_2\cop2\Processor_ISE\processor.vhd" Line 267: Net <wea_signal[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\vhdl_github_2\cop2\Processor_ISE\processor.vhd" Line 268: Net <dina_signal[31]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <processor>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\processor.vhd".
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\processor.vhd" line 341: Output port <to_adder> of the instance <pc_main_extend> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <wea_signal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <dina_signal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <processor> synthesized.
+
+Synthesizing Unit <add_pc>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\add_pc.vhd".
+    Found 32-bit adder for signal <output> created at line 42.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <add_pc> synthesized.
+
+Synthesizing Unit <add_branch>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\add_branch.vhd".
+    Found 32-bit adder for signal <output> created at line 43.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <add_branch> synthesized.
+
+Synthesizing Unit <shift_left_2>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\shift_left_2.vhd".
+    Summary:
+	no macro.
+Unit <shift_left_2> synthesized.
+
+Synthesizing Unit <zero_m>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\zero_m.vhd".
+    Summary:
+	no macro.
+Unit <zero_m> synthesized.
+
+Synthesizing Unit <branch_and>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\branch_and.vhd".
+    Summary:
+	no macro.
+Unit <branch_and> synthesized.
+
+Synthesizing Unit <pc_mux>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\pc_mux.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pc_mux> synthesized.
+
+Synthesizing Unit <jump_mux>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\jump_mux.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <jump_mux> synthesized.
+
+Synthesizing Unit <pc_main>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\pc_main.vhd".
+WARNING:Xst:647 - Input <pc_write> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <pc_curr_register>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <pc_main> synthesized.
+
+Synthesizing Unit <pc_main_helper>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\pc_main_helper.vhd".
+    Summary:
+	no macro.
+Unit <pc_main_helper> synthesized.
+
+Synthesizing Unit <jump_shift_left_2>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\jump_shift_left_2.vhd".
+    Summary:
+	no macro.
+Unit <jump_shift_left_2> synthesized.
+
+Synthesizing Unit <sign_extend>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\sign_extend.vhd".
+    Summary:
+	no macro.
+Unit <sign_extend> synthesized.
+
+Synthesizing Unit <mux_reg>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\mux_reg.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_reg> synthesized.
+
+Synthesizing Unit <register_file>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\register_file.vhd".
+        INIT_FILE = "register.txt"
+    Found 32-bit register for signal <addition_register1>.
+    Found 32x32-bit dual-port RAM <Mram_registers> for signal <registers>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <register_file> synthesized.
+
+Synthesizing Unit <Control_Unit>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\Control_Unit.vhd".
+    Found 64x18-bit Read Only RAM for signal <_n0130>
+WARNING:Xst:737 - Found 1-bit latch for signal <sel_additional_register>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator equal for signal <alu_count[31]_GND_23_o_equal_5_o> created at line 193
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Latch(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <Control_Unit> synthesized.
+
+Synthesizing Unit <counter_module>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\counter_module.vhd".
+    Found 6-bit register for signal <counter_register>.
+    Found 6-bit adder for signal <counter_register[5]_GND_24_o_add_0_OUT> created at line 49.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+Unit <counter_module> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd".
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd" line 233: Output port <e0> of the instance <enable_bus_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd" line 233: Output port <e1> of the instance <enable_bus_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd" line 233: Output port <e4> of the instance <enable_bus_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd" line 233: Output port <e5> of the instance <enable_bus_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd" line 233: Output port <e6> of the instance <enable_bus_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd" line 233: Output port <e7> of the instance <enable_bus_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd" line 233: Output port <e8> of the instance <enable_bus_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd" line 233: Output port <e9> of the instance <enable_bus_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd" line 233: Output port <e10> of the instance <enable_bus_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\alu.vhd" line 233: Output port <e11> of the instance <enable_bus_module> is unconnected or connected to loadless signal.
+    Found 32-bit 12-to-1 multiplexer for signal <r> created at line 240.
+WARNING:Xst:737 - Found 1-bit latch for signal <cin_adder>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <invert>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 Latch(s).
+	inferred   2 Multiplexer(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <adder_32>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\adder_32.vhd".
+    Summary:
+	no macro.
+Unit <adder_32> synthesized.
+
+Synthesizing Unit <add_enable>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\add_enable.vhd".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <add_enable> synthesized.
+
+Synthesizing Unit <two_complement>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\two_complement.vhd".
+    Found 32-bit adder for signal <a[31]_GND_93_o_add_1_OUT[31:0]> created at line 46.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <two_complement> synthesized.
+
+Synthesizing Unit <adder_16>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\adder-16.vhd".
+    Summary:
+	no macro.
+Unit <adder_16> synthesized.
+
+Synthesizing Unit <adder_8bit>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\adder_8bit.vhd".
+    Summary:
+	no macro.
+Unit <adder_8bit> synthesized.
+
+Synthesizing Unit <four_bit_adder>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\four_bit_adder.vhd".
+    Summary:
+	no macro.
+Unit <four_bit_adder> synthesized.
+
+Synthesizing Unit <Two_bit_adder>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\Two_bit_adder.vhd".
+    Summary:
+	no macro.
+Unit <Two_bit_adder> synthesized.
+
+Synthesizing Unit <one_bit_adder>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\one_bit_adder.vhd".
+    Summary:
+Unit <one_bit_adder> synthesized.
+
+Synthesizing Unit <MUlT>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\MUlT.vhd".
+    Found 32-bit register for signal <store>.
+    Found 32-bit register for signal <i>.
+    Found 1-bit register for signal <flag>.
+    Found 32-bit register for signal <R>.
+    Found 32-bit register for signal <sum>.
+    Found 32-bit adder for signal <sum[31]_store[31]_add_6_OUT> created at line 151.
+    Found 32-bit adder for signal <i[31]_GND_131_o_add_14_OUT> created at line 186.
+    Found 1-bit 32-to-1 multiplexer for signal <i[4]_Q[31]_Mux_5_o> created at line 112.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 129 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+Unit <MUlT> synthesized.
+
+Synthesizing Unit <Divider_module>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\Divider_module.vhd".
+    Found 32-bit adder for signal <m[31]_GND_132_o_add_1_OUT> created at line 60.
+    Found 32-bit adder for signal <d[31]_GND_132_o_add_4_OUT> created at line 65.
+    Found 32-bit adder for signal <q_s[31]_GND_132_o_add_7_OUT> created at line 73.
+    Found 32-bit adder for signal <r_s[31]_GND_132_o_add_9_OUT> created at line 74.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Multiplexer(s).
+Unit <Divider_module> synthesized.
+
+Synthesizing Unit <div1>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\div1.vhd".
+    Found 32-bit register for signal <reg_q>.
+    Found 32-bit register for signal <reg1>.
+    Found 32-bit register for signal <reg2>.
+    Found 32-bit register for signal <i>.
+    Found 32-bit register for signal <q>.
+    Found 32-bit register for signal <r>.
+    Found 32-bit subtractor for signal <GND_133_o_GND_133_o_sub_5_OUT<31:0>> created at line 76.
+    Found 32-bit subtractor for signal <i[31]_GND_133_o_sub_7_OUT<31:0>> created at line 82.
+    Found 1-bit 32-to-1 multiplexer for signal <i[4]_m[31]_Mux_0_o> created at line 67.
+    Found 32-bit comparator lessequal for signal <n0001> created at line 68
+    Found 32-bit comparator greater for signal <GND_133_o_i[31]_LessThan_11_o> created at line 90
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 192 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <div1> synthesized.
+
+Synthesizing Unit <and_bit>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\AND.vhd".
+    Summary:
+	no macro.
+Unit <and_bit> synthesized.
+
+Synthesizing Unit <or_bit>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\or_bit.vhd".
+    Summary:
+	no macro.
+Unit <or_bit> synthesized.
+
+Synthesizing Unit <xor_bit>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\xor_bit.vhd".
+    Summary:
+Unit <xor_bit> synthesized.
+
+Synthesizing Unit <shift_left_module>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\shift_left_module.vhd".
+WARNING:Xst:647 - Input <clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit shifter logical left for signal <a[31]_shamt[4]_shift_left_0_OUT> created at line 48
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <shift_left_module> synthesized.
+
+Synthesizing Unit <Shift_right_module>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\Shift_right_module.vhd".
+WARNING:Xst:647 - Input <clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit shifter logical right for signal <a[31]_shamt[4]_shift_right_0_OUT> created at line 48
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <Shift_right_module> synthesized.
+
+Synthesizing Unit <set_less_module>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\set_less_module.vhd".
+WARNING:Xst:647 - Input <clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <r<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <r<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator greater for signal <b[31]_a[31]_LessThan_1_o> created at line 47
+    Summary:
+	inferred   2 Latch(s).
+	inferred   1 Comparator(s).
+Unit <set_less_module> synthesized.
+
+Synthesizing Unit <enable_demux_bus>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\enable_demux_bus.vhd".
+    Summary:
+	no macro.
+Unit <enable_demux_bus> synthesized.
+
+Synthesizing Unit <demux>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\demux.vhd".
+    Found 16x16-bit Read Only RAM for signal <output>
+    Summary:
+	inferred   1 RAM(s).
+Unit <demux> synthesized.
+
+Synthesizing Unit <mem_addr_helper>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\mem_addr_helper.vhd".
+WARNING:Xst:647 - Input <a<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <mem_addr_helper> synthesized.
+
+Synthesizing Unit <alu_control>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\alu_control.vhd".
+    Found 64x5-bit Read Only RAM for signal <_n0138>
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_control_input<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_control_input<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_control_input<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_control_input<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <count<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   9 Latch(s).
+	inferred   5 Multiplexer(s).
+Unit <alu_control> synthesized.
+
+Synthesizing Unit <mux_mem>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\mux_mem.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_mem> synthesized.
+
+Synthesizing Unit <mux_alu>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\mux_alu.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_alu> synthesized.
+
+Synthesizing Unit <dot_mux_module>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\dot_mux_module.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <dot_mux_module> synthesized.
+
+Synthesizing Unit <Dot_prod_module>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\Dot_prod_module.vhd".
+INFO:Xst:3210 - "D:\vhdl_github_2\cop2\Processor_ISE\Dot_prod_module.vhd" line 88: Output port <cout> of the instance <Acc> is unconnected or connected to loadless signal.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Dot_prod_module> synthesized.
+
+Synthesizing Unit <Register_Dot>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\Register_Dot.vhd".
+        INIT_FILE = "registers_dot.txt"
+    Found 32-bit register for signal <registers<1>>.
+    Found 32-bit register for signal <registers<2>>.
+    Found 32-bit register for signal <registers<3>>.
+    Found 32-bit register for signal <registers<4>>.
+    Found 32-bit register for signal <registers<5>>.
+    Found 32-bit register for signal <registers<6>>.
+    Found 32-bit register for signal <registers<7>>.
+    Found 32-bit register for signal <registers<0>>.
+    Summary:
+	inferred 256 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <Register_Dot> synthesized.
+
+Synthesizing Unit <multiplier>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\multiplier.vhd".
+WARNING:Xst:647 - Input <clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32x32-bit multiplier for signal <result> created at line 44.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <multiplier> synthesized.
+
+Synthesizing Unit <Adder>.
+    Related source file is "D:\vhdl_github_2\cop2\Processor_ISE\Adder.vhd".
+WARNING:Xst:653 - Signal <cout> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 64-bit adder for signal <n0013> created at line 46.
+    Found 64-bit adder for signal <n0016> created at line 46.
+    Found 64-bit adder for signal <result> created at line 46.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+Unit <Adder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x16-bit single-port Read Only RAM                   : 1
+ 32x32-bit dual-port RAM                               : 2
+ 64x18-bit single-port Read Only RAM                   : 1
+ 64x5-bit single-port Read Only RAM                    : 1
+# Multipliers                                          : 4
+ 32x32-bit multiplier                                  : 4
+# Adders/Subtractors                                   : 15
+ 32-bit adder                                          : 9
+ 32-bit subtractor                                     : 2
+ 6-bit adder                                           : 1
+ 64-bit adder                                          : 3
+# Registers                                            : 22
+ 1-bit register                                        : 1
+ 32-bit register                                       : 20
+ 6-bit register                                        : 1
+# Latches                                              : 14
+ 1-bit latch                                           : 14
+# Comparators                                          : 4
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 47
+ 1-bit 2-to-1 multiplexer                              : 7
+ 1-bit 32-to-1 multiplexer                             : 2
+ 32-bit 12-to-1 multiplexer                            : 1
+ 32-bit 2-to-1 multiplexer                             : 36
+ 5-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 66
+ 1-bit xor2                                            : 65
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst - The specified part-type was not generated at build time. XST is loading the full part-type and will therefore consume more CPU and memory.
+Loading device for application Rf_Device from file '7a100t.nph' in environment J:\xilinx_ise\14.1\ISE_DS\ISE\.
+Reading core <instruction_block_module.ngc>.
+Reading core <memory_block_module.ngc>.
+Loading core <instruction_block_module> for timing and area information for instance <instruction_block>.
+Loading core <memory_block_module> for timing and area information for instance <memory_unit>.
+Loading device for application Rf_Device from file '7a100t.nph' in environment J:\xilinx_ise\14.1\ISE_DS\ISE\.
+WARNING:Xst:1426 - The value init of the FF/Latch count_31 hinder the constant cleaning in the block alu_control_unit.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1710 - FF/Latch <r_30> (without init value) has a constant value of 0 in block <set_less_than>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cin_adder> (without init value) has a constant value of 0 in block <alu1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_4> has a constant value of 0 in block <alu_control_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <reg_q_31> of sequential type is unconnected in block <divider>.
+WARNING:Xst:2677 - Node <reg2_31> of sequential type is unconnected in block <divider>.
+WARNING:Xst:2677 - Node <reg1_31> of sequential type is unconnected in block <divider>.
+
+Synthesizing (advanced) Unit <Control_Unit>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0130> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 18-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <op_code>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Control_Unit> synthesized (advanced).
+
+Synthesizing (advanced) Unit <alu_control>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0138> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 5-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <funct>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <alu_control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter_module>.
+The following registers are absorbed into counter <counter_register>: 1 register on signal <counter_register>.
+Unit <counter_module> synthesized (advanced).
+
+Synthesizing (advanced) Unit <demux>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_output> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <output>        |          |
+    -----------------------------------------------------------------------
+Unit <demux> synthesized (advanced).
+
+Synthesizing (advanced) Unit <register_file>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_registers> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <enable_write>  | high     |
+    |     addrA          | connected to signal <sel_reg_w>     |          |
+    |     diA            | connected to signal <reg_w>         |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <sel_reg_a>     |          |
+    |     doB            | connected to signal <reg_a>         |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_registers1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <enable_write>  | high     |
+    |     addrA          | connected to signal <sel_reg_w>     |          |
+    |     diA            | connected to signal <reg_w>         |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <sel_reg_b>     |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <register_file> synthesized (advanced).
+WARNING:Xst:2677 - Node <reg_q_31> of sequential type is unconnected in block <div1>.
+WARNING:Xst:2677 - Node <reg2_31> of sequential type is unconnected in block <div1>.
+WARNING:Xst:2677 - Node <reg1_31> of sequential type is unconnected in block <div1>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x16-bit single-port distributed Read Only RAM       : 1
+ 32x32-bit dual-port distributed RAM                   : 2
+ 64x18-bit single-port distributed Read Only RAM       : 1
+ 64x5-bit single-port distributed Read Only RAM        : 1
+# Multipliers                                          : 4
+ 32x32-bit multiplier                                  : 4
+# Adders/Subtractors                                   : 14
+ 32-bit adder                                          : 9
+ 32-bit subtractor                                     : 2
+ 64-bit adder                                          : 3
+# Counters                                             : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 638
+ Flip-Flops                                            : 638
+# Comparators                                          : 4
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 73
+ 1-bit 2-to-1 multiplexer                              : 34
+ 1-bit 32-to-1 multiplexer                             : 2
+ 32-bit 12-to-1 multiplexer                            : 1
+ 32-bit 2-to-1 multiplexer                             : 35
+ 5-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 66
+ 1-bit xor2                                            : 65
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <cin_adder> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <r_30> (without init value) has a constant value of 0 in block <set_less_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch count_31 hinder the constant cleaning in the block alu_control.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <count_4> has a constant value of 0 in block <alu_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <store_0> (without init value) has a constant value of 0 in block <MUlT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i_31> (without init value) has a constant value of 0 in block <div1>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <processor> ...
+
+Optimizing unit <pc_main> ...
+
+Optimizing unit <register_file> ...
+
+Optimizing unit <Control_Unit> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <two_complement> ...
+
+Optimizing unit <MUlT> ...
+
+Optimizing unit <Divider_module> ...
+
+Optimizing unit <div1> ...
+
+Optimizing unit <Register_Dot> ...
+
+Optimizing unit <alu_control> ...
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_31> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_30> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_29> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_28> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_27> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_26> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_25> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_24> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_23> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_22> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_21> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_20> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_19> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_18> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_17> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_16> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_15> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_14> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_13> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_12> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_11> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_10> of sequential type is unconnected in block <processor>.
+WARNING:Xst:2677 - Node <pc_main_module/pc_curr_register_9> of sequential type is unconnected in block <processor>.
+WARNING:Xst:1710 - FF/Latch <alu1/Divider/divider/i_5> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_6> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_7> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_8> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_9> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_10> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_11> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_12> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_13> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_14> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_15> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_16> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_17> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_18> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_19> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_20> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_21> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_22> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_23> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_24> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_25> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_26> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_27> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_28> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_29> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alu1/Divider/divider/i_30> (without init value) has a constant value of 0 in block <processor>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+PACKER Warning: Lut pc_main_module/Mmux_pc_out311 is driving XOR and other loads hence can not be packed with the XOR/Carry. This would result in an extra LUT for a feedthrough.
+Found area constraint ratio of 100 (+ 5) on block processor, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 593
+ Flip-Flops                                            : 593
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : processor.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2773
+#      GND                         : 3
+#      INV                         : 101
+#      LUT1                        : 36
+#      LUT2                        : 425
+#      LUT3                        : 334
+#      LUT4                        : 258
+#      LUT5                        : 219
+#      LUT6                        : 456
+#      MUXCY                       : 458
+#      MUXF7                       : 71
+#      VCC                         : 4
+#      XORCY                       : 408
+# FlipFlops/Latches                : 607
+#      FDCE                        : 263
+#      FDCE_1                      : 31
+#      FDE                         : 291
+#      FDPE                        : 5
+#      FDR                         : 6
+#      LD                          : 3
+#      LDC                         : 5
+#      LDP                         : 3
+# RAMS                             : 20
+#      RAM32M                      : 10
+#      RAM32X1D                    : 4
+#      RAMB18E1                    : 6
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 2
+#      IBUF                        : 1
+#      OBUF                        : 1
+# DSPs                             : 16
+#      DSP48E1                     : 16
+PACKER Warning: Lut pc_main_module/Mmux_pc_out311 is driving XOR and other loads hence can not be packed with the XOR/Carry. This would result in an extra LUT for a feedthrough.
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa7a100tcsg324-2i 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             607  out of  126800     0%  
+ Number of Slice LUTs:                 1877  out of  63400     2%  
+    Number used as Logic:              1829  out of  63400     2%  
+    Number used as Memory:               48  out of  19000     0%  
+       Number used as RAM:               48
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2175
+   Number with an unused Flip Flop:    1568  out of   2175    72%  
+   Number with an unused LUT:           298  out of   2175    13%  
+   Number of fully used LUT-FF pairs:   309  out of   2175    14%  
+   Number of unique control sets:        23
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   3  out of    210     1%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                3  out of    135     2%  
+    Number using Block RAM only:          3
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                     16  out of    240     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------------------+----------------------------------------------+-------+
+Clock Signal                                                                                   | Clock buffer(FF name)                        | Load  |
+-----------------------------------------------------------------------------------------------+----------------------------------------------+-------+
+clock                                                                                          | BUFGP                                        | 616   |
+controller/_n0130<17>(controller_Mram__n0130171:O)                                             | NONE(*)(controller/sel_additional_register)  | 1     |
+alu1/alu_select/Mram_output1(alu1/alu_select/Mram_output111:O)                                 | NONE(*)(alu1/set_less_than/r_0)              | 1     |
+alu1/alu_select/Mram_output(alu1/alu_select/Mram_output1:O)                                    | NONE(*)(alu1/invert)                         | 1     |
+alu1/Divider/divider/i<10>                                                                     | NONE(alu_control_unit/count_31)              | 1     |
+alu_control_unit/PWR_146_o_GND_179_o_OR_302_o(alu_control_unit/PWR_146_o_GND_179_o_OR_302_o1:O)| NONE(*)(alu_control_unit/alu_control_input_3)| 7     |
+-----------------------------------------------------------------------------------------------+----------------------------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 16.303ns (Maximum Frequency: 61.339MHz)
+   Minimum input arrival time before clock: 3.332ns
+   Maximum output required time after clock: 11.382ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 16.303ns (frequency: 61.339MHz)
+  Total number of paths / destination ports: 4429664402562 / 1392
+-------------------------------------------------------------------------
+Delay:               16.303ns (Levels of Logic = 42)
+  Source:            instruction_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/SP.WIDE_PRIM18.ram (RAM)
+  Destination:       memory_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/SP.WIDE_PRIM18.ram (RAM)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: instruction_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/SP.WIDE_PRIM18.ram to memory_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/SP.WIDE_PRIM18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOBDO14   15   2.236   0.831  ramloop[0].ram.r/v6_init.ram/SP.WIDE_PRIM18.ram (DOUTA<30>)
+     end scope: 'instruction_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr:DOUTA<30>'
+     end scope: 'instruction_block:douta<30>'
+     LUT6:I0->O          256   0.097   0.526  controller_Mram__n0130131 (dot_read_enable)
+     LUT2:I1->O            1   0.097   0.339  dot_product_unit/Register_file/Mmux_y1110 (dot_product_unit/y1<0>)
+     DSP48E1:A0->PCOUT47    1   3.397   0.000  dot_product_unit/mult1/Mmult_result (dot_product_unit/mult1/Mmult_result_PCOUT_to_dot_product_unit/mult1/Mmult_result1_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  dot_product_unit/mult1/Mmult_result1 (dot_product_unit/mult1/Mmult_result1_PCOUT_to_dot_product_unit/mult1/Mmult_result2_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  dot_product_unit/mult1/Mmult_result2 (dot_product_unit/mult1/Mmult_result2_PCOUT_to_dot_product_unit/mult1/Mmult_result3_PCIN_47)
+     DSP48E1:PCIN47->P0    2   1.271   0.576  dot_product_unit/mult1/Mmult_result3 (dot_product_unit/result1<34>)
+     LUT3:I0->O            1   0.097   0.355  dot_product_unit/Acc/Madd_n001634 (dot_product_unit/Acc/Madd_n001634)
+     LUT4:I3->O            1   0.097   0.000  dot_product_unit/Acc/Madd_n0016_lut<0>35 (dot_product_unit/Acc/Madd_n0016_lut<0>35)
+     MUXCY:S->O            1   0.353   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_34 (dot_product_unit/Acc/Madd_n0016_cy<0>35)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_35 (dot_product_unit/Acc/Madd_n0016_cy<0>36)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_36 (dot_product_unit/Acc/Madd_n0016_cy<0>37)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_37 (dot_product_unit/Acc/Madd_n0016_cy<0>38)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_38 (dot_product_unit/Acc/Madd_n0016_cy<0>39)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_39 (dot_product_unit/Acc/Madd_n0016_cy<0>40)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_40 (dot_product_unit/Acc/Madd_n0016_cy<0>41)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_41 (dot_product_unit/Acc/Madd_n0016_cy<0>42)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_42 (dot_product_unit/Acc/Madd_n0016_cy<0>43)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_43 (dot_product_unit/Acc/Madd_n0016_cy<0>44)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_44 (dot_product_unit/Acc/Madd_n0016_cy<0>45)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_45 (dot_product_unit/Acc/Madd_n0016_cy<0>46)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_46 (dot_product_unit/Acc/Madd_n0016_cy<0>47)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_47 (dot_product_unit/Acc/Madd_n0016_cy<0>48)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_48 (dot_product_unit/Acc/Madd_n0016_cy<0>49)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_49 (dot_product_unit/Acc/Madd_n0016_cy<0>50)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_50 (dot_product_unit/Acc/Madd_n0016_cy<0>51)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_51 (dot_product_unit/Acc/Madd_n0016_cy<0>52)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_52 (dot_product_unit/Acc/Madd_n0016_cy<0>53)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_53 (dot_product_unit/Acc/Madd_n0016_cy<0>54)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_54 (dot_product_unit/Acc/Madd_n0016_cy<0>55)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_55 (dot_product_unit/Acc/Madd_n0016_cy<0>56)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_56 (dot_product_unit/Acc/Madd_n0016_cy<0>57)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_57 (dot_product_unit/Acc/Madd_n0016_cy<0>58)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_58 (dot_product_unit/Acc/Madd_n0016_cy<0>59)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_59 (dot_product_unit/Acc/Madd_n0016_cy<0>60)
+     MUXCY:CI->O           1   0.023   0.000  dot_product_unit/Acc/Madd_n0016_cy<0>_60 (dot_product_unit/Acc/Madd_n0016_cy<0>61)
+     XORCY:CI->O           1   0.370   0.355  dot_product_unit/Acc/Madd_n0016_xor<0>_61 (dot_product_unit/Acc/n0016<62>)
+     LUT2:I1->O            1   0.097   0.000  dot_product_unit/Acc/Madd_result_lut<62> (dot_product_unit/Acc/Madd_result_lut<62>)
+     MUXCY:S->O            0   0.353   0.000  dot_product_unit/Acc/Madd_result_cy<62> (dot_product_unit/Acc/Madd_result_cy<62>)
+     XORCY:CI->O           1   0.370   0.355  dot_product_unit/Acc/Madd_result_xor<63> (dot_product_unit/n0016<63>)
+     LUT5:I4->O            2   0.097   0.344  write_data_mux_mem/Mmux_dout251 (write_data_to_memory_unit<31>)
+     begin scope: 'memory_unit:dina<31>'
+     begin scope: 'memory_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr:DINA<31>'
+     RAMB18E1:DIBDI15          0.214          ramloop[1].ram.r/v6_init.ram/SP.WIDE_PRIM18.ram
+    ----------------------------------------
+    Total                     16.303ns (12.620ns logic, 3.683ns route)
+                                       (77.4% logic, 22.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 845 / 524
+-------------------------------------------------------------------------
+Offset:              3.332ns (Levels of Logic = 13)
+  Source:            pc_reset (PAD)
+  Destination:       pc_main_module/pc_curr_register_8 (FF)
+  Destination Clock: clock rising
+
+  Data Path: pc_reset to pc_main_module/pc_curr_register_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           133   0.001   0.588  pc_reset_IBUF (pc_reset_IBUF)
+     LUT2:I0->O            1   0.097   0.000  pc_main_module/Mmux_pc_out1211 (pc_main_module/Mmux_pc_out121)
+     MUXCY:S->O            1   0.353   0.000  pc_plus_four/Madd_output_cy<1> (pc_plus_four/Madd_output_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  pc_plus_four/Madd_output_cy<2> (pc_plus_four/Madd_output_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  pc_plus_four/Madd_output_cy<3> (pc_plus_four/Madd_output_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  pc_plus_four/Madd_output_cy<4> (pc_plus_four/Madd_output_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  pc_plus_four/Madd_output_cy<5> (pc_plus_four/Madd_output_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  pc_plus_four/Madd_output_cy<6> (pc_plus_four/Madd_output_cy<6>)
+     XORCY:CI->O           2   0.370   0.444  pc_plus_four/Madd_output_xor<7> (pc_plus_4_signal<7>)
+     LUT2:I0->O            1   0.097   0.000  pc_plus_immediate/Madd_output_lut<7> (pc_plus_immediate/Madd_output_lut<7>)
+     MUXCY:S->O            0   0.353   0.000  pc_plus_immediate/Madd_output_cy<7> (pc_plus_immediate/Madd_output_cy<7>)
+     XORCY:CI->O           1   0.370   0.439  pc_plus_immediate/Madd_output_xor<8> (pc_add_immediate_signal<8>)
+     LUT5:I3->O            1   0.097   0.000  mux_jump/Mmux_pc_final311 (pc_final<8>)
+     FDCE:D                    0.008          pc_main_module/pc_curr_register_8
+    ----------------------------------------
+    Total                      3.332ns (1.861ns logic, 1.471ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'alu_control_unit/PWR_146_o_GND_179_o_OR_302_o'
+  Total number of paths / destination ports: 4188 / 1
+-------------------------------------------------------------------------
+Offset:              9.867ns (Levels of Logic = 18)
+  Source:            alu_control_unit/alu_control_input_3 (LATCH)
+  Destination:       alu_out_m (PAD)
+  Source Clock:      alu_control_unit/PWR_146_o_GND_179_o_OR_302_o falling
+
+  Data Path: alu_control_unit/alu_control_input_3 to alu_out_m
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDP:G->Q            173   0.472   0.727  alu_control_unit/alu_control_input_3 (alu_control_unit/alu_control_input_3)
+     LUT3:I0->O           69   0.097   0.880  alu1/alu_select/Mram_output1 (alu1/alu_select/Mram_output)
+     LUT6:I1->O            1   0.097   0.000  alu1/Adder/enable_comp/Mmux_bs112 (alu1/Adder/enable_comp/Mmux_bs11)
+     MUXCY:S->O            1   0.353   0.000  alu1/Adder/sign_invert/Madd_a[31]_GND_93_o_add_1_OUT[31:0]_cy<0> (alu1/Adder/sign_invert/Madd_a[31]_GND_93_o_add_1_OUT[31:0]_cy<0>)
+     XORCY:CI->O           1   0.370   0.355  alu1/Adder/sign_invert/Madd_a[31]_GND_93_o_add_1_OUT[31:0]_xor<1> (alu1/Adder/sign_invert/a[31]_GND_93_o_add_1_OUT[31:0]<1>)
+     LUT6:I5->O            3   0.097   0.451  alu1/Adder/sign_invert/Mmux_output121 (alu1/Adder/B_invert<1>)
+     LUT6:I4->O            3   0.097   0.367  alu1/Adder/adder1/adder1/adder1/f1/f1/cout1 (alu1/Adder/adder1/adder1/adder1/f1/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder1/adder1/adder2/f0/f1/cout1 (alu1/Adder/adder1/adder1/adder2/f0/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder1/adder2/f1/f1/cout1 (alu1/Adder/adder1/adder1/adder2/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder2/adder1/f1/f1/cout1 (alu1/Adder/adder1/adder2/adder1/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder2/adder2/f1/f1/cout1 (alu1/Adder/adder1/adder2/adder2/f1/c_temp1)
+     LUT6:I5->O            5   0.097   0.378  alu1/Adder/adder2/adder1/adder1/f1/f1/cout1 (alu1/Adder/adder2/adder1/adder1/f1/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder2/adder1/adder2/f1/f1/cout1 (alu1/Adder/adder2/adder1/adder2/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder2/adder2/adder1/f0/f1/cout1 (alu1/Adder/adder2/adder2/adder1/f0/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder2/adder2/adder1/f1/f1/cout1 (alu1/Adder/adder2/adder2/adder1/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder2/adder2/adder2/f0/f1/cout1 (alu1/Adder/adder2/adder2/adder2/f0/c_temp1)
+     LUT6:I5->O            2   0.097   0.758  alu1/Adder/adder2/adder2/adder2/f1/f1/cout1 (alu1/Adder/adder2/adder2/adder2/f1/c_temp1)
+     LUT6:I0->O            1   0.097   0.339  alu1/Adder/adder2/adder2/adder2/f1/f2/cout1 (alu_out_m_OBUF)
+     OBUF:I->O                 0.000          alu_out_m_OBUF (alu_out_m)
+    ----------------------------------------
+    Total                      9.867ns (2.650ns logic, 7.217ns route)
+                                       (26.9% logic, 73.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 19382 / 1
+-------------------------------------------------------------------------
+Offset:              11.382ns (Levels of Logic = 19)
+  Source:            instruction_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/SP.WIDE_PRIM18.ram (RAM)
+  Destination:       alu_out_m (PAD)
+  Source Clock:      clock rising
+
+  Data Path: instruction_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/SP.WIDE_PRIM18.ram to alu_out_m
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOBDO12   16   2.236   0.836  ramloop[0].ram.r/v6_init.ram/SP.WIDE_PRIM18.ram (DOUTA<28>)
+     end scope: 'instruction_block/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr:DOUTA<28>'
+     end scope: 'instruction_block:douta<28>'
+     LUT6:I0->O          225   0.097   0.521  controller_Mram__n013031 (alu_src_s)
+     LUT6:I5->O            1   0.097   0.000  alu1/Adder/enable_comp/Mmux_bs112 (alu1/Adder/enable_comp/Mmux_bs11)
+     MUXCY:S->O            1   0.353   0.000  alu1/Adder/sign_invert/Madd_a[31]_GND_93_o_add_1_OUT[31:0]_cy<0> (alu1/Adder/sign_invert/Madd_a[31]_GND_93_o_add_1_OUT[31:0]_cy<0>)
+     XORCY:CI->O           1   0.370   0.355  alu1/Adder/sign_invert/Madd_a[31]_GND_93_o_add_1_OUT[31:0]_xor<1> (alu1/Adder/sign_invert/a[31]_GND_93_o_add_1_OUT[31:0]<1>)
+     LUT6:I5->O            3   0.097   0.451  alu1/Adder/sign_invert/Mmux_output121 (alu1/Adder/B_invert<1>)
+     LUT6:I4->O            3   0.097   0.367  alu1/Adder/adder1/adder1/adder1/f1/f1/cout1 (alu1/Adder/adder1/adder1/adder1/f1/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder1/adder1/adder2/f0/f1/cout1 (alu1/Adder/adder1/adder1/adder2/f0/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder1/adder2/f1/f1/cout1 (alu1/Adder/adder1/adder1/adder2/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder2/adder1/f1/f1/cout1 (alu1/Adder/adder1/adder2/adder1/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder2/adder2/f1/f1/cout1 (alu1/Adder/adder1/adder2/adder2/f1/c_temp1)
+     LUT6:I5->O            5   0.097   0.378  alu1/Adder/adder2/adder1/adder1/f1/f1/cout1 (alu1/Adder/adder2/adder1/adder1/f1/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder2/adder1/adder2/f1/f1/cout1 (alu1/Adder/adder2/adder1/adder2/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder2/adder2/adder1/f0/f1/cout1 (alu1/Adder/adder2/adder2/adder1/f0/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder2/adder2/adder1/f1/f1/cout1 (alu1/Adder/adder2/adder2/adder1/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder2/adder2/adder2/f0/f1/cout1 (alu1/Adder/adder2/adder2/adder2/f0/c_temp1)
+     LUT6:I5->O            2   0.097   0.758  alu1/Adder/adder2/adder2/adder2/f1/f1/cout1 (alu1/Adder/adder2/adder2/adder2/f1/c_temp1)
+     LUT6:I0->O            1   0.097   0.339  alu1/Adder/adder2/adder2/adder2/f1/f2/cout1 (alu_out_m_OBUF)
+     OBUF:I->O                 0.000          alu_out_m_OBUF (alu_out_m)
+    ----------------------------------------
+    Total                     11.382ns (4.414ns logic, 6.968ns route)
+                                       (38.8% logic, 61.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'alu1/alu_select/Mram_output'
+  Total number of paths / destination ports: 80 / 1
+-------------------------------------------------------------------------
+Offset:              7.812ns (Levels of Logic = 14)
+  Source:            alu1/invert (LATCH)
+  Destination:       alu_out_m (PAD)
+  Source Clock:      alu1/alu_select/Mram_output falling
+
+  Data Path: alu1/invert to alu_out_m
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              48   0.472   0.704  alu1/invert (alu1/invert)
+     LUT4:I1->O            1   0.097   0.571  alu1/Adder/adder1/adder1/adder1/f0/f2/cout1_SW0 (N28)
+     LUT6:I3->O            3   0.097   0.367  alu1/Adder/adder1/adder1/adder1/f1/f1/cout1 (alu1/Adder/adder1/adder1/adder1/f1/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder1/adder1/adder2/f0/f1/cout1 (alu1/Adder/adder1/adder1/adder2/f0/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder1/adder2/f1/f1/cout1 (alu1/Adder/adder1/adder1/adder2/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder2/adder1/f1/f1/cout1 (alu1/Adder/adder1/adder2/adder1/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder2/adder2/f1/f1/cout1 (alu1/Adder/adder1/adder2/adder2/f1/c_temp1)
+     LUT6:I5->O            5   0.097   0.378  alu1/Adder/adder2/adder1/adder1/f1/f1/cout1 (alu1/Adder/adder2/adder1/adder1/f1/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder2/adder1/adder2/f1/f1/cout1 (alu1/Adder/adder2/adder1/adder2/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder2/adder2/adder1/f0/f1/cout1 (alu1/Adder/adder2/adder2/adder1/f0/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder2/adder2/adder1/f1/f1/cout1 (alu1/Adder/adder2/adder2/adder1/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder2/adder2/adder2/f0/f1/cout1 (alu1/Adder/adder2/adder2/adder2/f0/c_temp1)
+     LUT6:I5->O            2   0.097   0.758  alu1/Adder/adder2/adder2/adder2/f1/f1/cout1 (alu1/Adder/adder2/adder2/adder2/f1/c_temp1)
+     LUT6:I0->O            1   0.097   0.339  alu1/Adder/adder2/adder2/adder2/f1/f2/cout1 (alu_out_m_OBUF)
+     OBUF:I->O                 0.000          alu_out_m_OBUF (alu_out_m)
+    ----------------------------------------
+    Total                      7.812ns (1.733ns logic, 6.079ns route)
+                                       (22.2% logic, 77.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'controller/_n0130<17>'
+  Total number of paths / destination ports: 1364 / 1
+-------------------------------------------------------------------------
+Offset:              9.067ns (Levels of Logic = 17)
+  Source:            controller/sel_additional_register (LATCH)
+  Destination:       alu_out_m (PAD)
+  Source Clock:      controller/_n0130<17> falling
+
+  Data Path: controller/sel_additional_register to alu_out_m
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q             143   0.472   0.903  controller/sel_additional_register (controller/sel_additional_register)
+     LUT6:I0->O            1   0.097   0.000  alu1/Adder/enable_comp/Mmux_bs112 (alu1/Adder/enable_comp/Mmux_bs11)
+     MUXCY:S->O            1   0.353   0.000  alu1/Adder/sign_invert/Madd_a[31]_GND_93_o_add_1_OUT[31:0]_cy<0> (alu1/Adder/sign_invert/Madd_a[31]_GND_93_o_add_1_OUT[31:0]_cy<0>)
+     XORCY:CI->O           1   0.370   0.355  alu1/Adder/sign_invert/Madd_a[31]_GND_93_o_add_1_OUT[31:0]_xor<1> (alu1/Adder/sign_invert/a[31]_GND_93_o_add_1_OUT[31:0]<1>)
+     LUT6:I5->O            3   0.097   0.451  alu1/Adder/sign_invert/Mmux_output121 (alu1/Adder/B_invert<1>)
+     LUT6:I4->O            3   0.097   0.367  alu1/Adder/adder1/adder1/adder1/f1/f1/cout1 (alu1/Adder/adder1/adder1/adder1/f1/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder1/adder1/adder2/f0/f1/cout1 (alu1/Adder/adder1/adder1/adder2/f0/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder1/adder2/f1/f1/cout1 (alu1/Adder/adder1/adder1/adder2/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder2/adder1/f1/f1/cout1 (alu1/Adder/adder1/adder2/adder1/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder1/adder2/adder2/f1/f1/cout1 (alu1/Adder/adder1/adder2/adder2/f1/c_temp1)
+     LUT6:I5->O            5   0.097   0.378  alu1/Adder/adder2/adder1/adder1/f1/f1/cout1 (alu1/Adder/adder2/adder1/adder1/f1/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder2/adder1/adder2/f1/f1/cout1 (alu1/Adder/adder2/adder1/adder2/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder2/adder2/adder1/f0/f1/cout1 (alu1/Adder/adder2/adder2/adder1/f0/c_temp1)
+     LUT6:I5->O            3   0.097   0.367  alu1/Adder/adder2/adder2/adder1/f1/f1/cout1 (alu1/Adder/adder2/adder2/adder1/f1/c_temp1)
+     LUT6:I5->O            4   0.097   0.372  alu1/Adder/adder2/adder2/adder2/f0/f1/cout1 (alu1/Adder/adder2/adder2/adder2/f0/c_temp1)
+     LUT6:I5->O            2   0.097   0.758  alu1/Adder/adder2/adder2/adder2/f1/f1/cout1 (alu1/Adder/adder2/adder2/adder2/f1/c_temp1)
+     LUT6:I0->O            1   0.097   0.339  alu1/Adder/adder2/adder2/adder2/f1/f2/cout1 (alu_out_m_OBUF)
+     OBUF:I->O                 0.000          alu_out_m_OBUF (alu_out_m)
+    ----------------------------------------
+    Total                      9.067ns (2.553ns logic, 6.514ns route)
+                                       (28.2% logic, 71.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock alu1/alu_select/Mram_output
+---------------------------------------------+---------+---------+---------+---------+
+                                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------+---------+---------+---------+---------+
+alu_control_unit/PWR_146_o_GND_179_o_OR_302_o|         |         |    1.341|         |
+---------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock alu1/alu_select/Mram_output1
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+clock                |         |         |    6.540|         |
+controller/_n0130<17>|         |         |    3.794|         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock alu_control_unit/PWR_146_o_GND_179_o_OR_302_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    4.489|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock
+---------------------------------------------+---------+---------+---------+---------+
+                                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------+---------+---------+---------+---------+
+alu1/Divider/divider/i<10>                   |         |    3.469|         |         |
+alu1/alu_select/Mram_output                  |         |    8.324|         |         |
+alu1/alu_select/Mram_output1                 |         |    6.483|         |         |
+alu_control_unit/PWR_146_o_GND_179_o_OR_302_o|         |   10.379|    1.896|         |
+clock                                        |   16.303|    3.337|    0.708|         |
+controller/_n0130<17>                        |         |    9.579|         |         |
+---------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock controller/_n0130<17>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    3.169|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 29.31 secs
+ 
+--> 
+
+Total memory usage is 5062096 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  118 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+
