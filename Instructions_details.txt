@@ -1,0 +1,30 @@
+
+Operations implemented:
+
+Add
+subtract
+set less than 
+Addi
+and
+or
+Mult
+Div
+shift left logical
+shift right logical
+store word
+load word
+beq
+jump  Addr
+//Dot product unit
+dlw
+dsw1
+
+
+To load data from memory to dot product unit :
+
+dlw reg0 0(addr)
+111100  Addr_reg , reg0 , offset 
+
+To compute and store result into memory :
+dsw 0000  offset(addr)
+111101  Addr_reg , offset
